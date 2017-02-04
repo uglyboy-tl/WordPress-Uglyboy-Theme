@@ -1,0 +1,154 @@
+body {
+    background-color: #f7f3f0;
+}
+
+a {
+    color: #d65050;
+}
+
+.typo a {
+  border-bottom: 1px solid #d65050;
+}
+
+blockquote {
+  border-left: 1px solid #d65050;
+}
+
+.pure-skin-uglyboy .pure-button {
+    font-size: 100%;
+    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+    padding: 0.5em 1.5em 0.5em;
+    color: #371616; /* rgba not supported (IE 8) */
+    /* color: rgba(0, 0, 0, 0.80); rgba supported */
+    /* *color: #444; IE 6 & 7 */
+    border: 1px solid #e3baba; /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
+    background-color: #e8c5c5;
+    text-decoration: none;
+    border-radius: 2px;
+    -webkit-font-smoothing: antialiased;
+    /* Transitions */
+    -webkit-transition: 0.1s linear -webkit-box-shadow;
+    -moz-transition: 0.1s linear -moz-box-shadow;
+    -ms-transition: 0.1s linear box-shadow;
+    -o-transition: 0.1s linear box-shadow;
+    transition: 0.1s linear box-shadow;
+}
+
+.pure-skin-uglyboy .pure-button-hover,
+.pure-skin-uglyboy .pure-button:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.05)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.05));
+    background-image: -ms-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
+}
+
+.pure-skin-uglyboy .pure-button-active,
+.pure-skin-uglyboy .pure-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+
+.pure-skin-uglyboy .pure-button-primary,
+.pure-skin-uglyboy .pure-button-selected,
+.pure-skin-uglyboy a.pure-button-primary,
+.pure-skin-uglyboy a.pure-button-selected {
+    background-color: #d65050;
+    color: #fefbfb;
+}
+
+/* FIXED MENU */
+.pure-skin-uglyboy .pure-menu-fixed {
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+}
+
+.pure-skin-uglyboy .pure-menu,
+.pure-skin-uglyboy .pure-menu.pure-menu-horizontal li .pure-menu-children {
+    background: #f7f3f0; /* Old browsers */
+}
+
+.pure-skin-uglyboy .pure-menu a{
+    text-decoration: none;
+}
+/* Focus style for a dropdown menu-item when the parent has been opened */
+
+.pure-skin-uglyboy .pure-menu li a:hover,
+.pure-skin-uglyboy .pure-menu li a:focus {
+    background: #efd7d7;
+}
+
+/* DISABLED STATES */
+.pure-skin-uglyboy .pure-menu li.pure-menu-disabled a:hover,
+.pure-skin-uglyboy .pure-menu li.pure-menu-disabled a:focus {
+    background: #f9f0f0;
+    color: #d59595;
+}
+
+.pure-skin-uglyboy .pure-menu .pure-menu-disabled > a {
+    color: #d59595;
+}
+
+/* HEADINGS */
+.pure-skin-uglyboy .pure-menu .pure-menu-heading {
+    color: #371616;
+    text-transform: uppercase;
+    font-size: 90%;
+    margin-top: 0.5em;
+    border-bottom: solid 1px #f5e5e5;
+}
+
+
+/* SELECTED MENU ITEM */
+.pure-skin-uglyboy .pure-menu li.pure-menu-selected a {
+    background-color: #d65050;
+    color: #fefbfb;
+}
+
+/* FIXED MENU */
+.pure-skin-uglyboy .pure-menu.pure-menu-fixed {
+    border: none;
+    border-bottom: 1px solid #f5e5e5;
+}
+/* end from PURE menu.css ***********************************/
+/* from PURE menu-responsive.css ****************************/
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .pure-skin-uglyboy .pure-menu-horizontal {
+        width:100%;
+    }
+
+    .pure-skin-uglyboy .pure-menu-children li {
+        display: block;
+        border-bottom:1px solid #f5e5e5;
+    }
+
+}
+
+
+/* end from menu-responsive.css ******************/
+
+/*--- Red ---*/
+.ui.primary.labels .label,
+.ui.primary.label {
+  background-color: #d65050 !important;
+  border-color: #d65050 !important;
+  color: #FFFFFF !important;
+}
+
+/* Link */
+.ui.primary.labels .label:hover,
+a.ui.primary.label:hover {
+  background-color: #d93434 !important;
+  border-color: #d93434 !important;
+  color: #FFFFFF !important;
+}
+
+/* Ribbon */
+.ui.primary.ribbon.label {
+  border-color: #c52e2e !important;
+}

@@ -1,0 +1,267 @@
+/*
+Theme Name: Uglyboy
+Theme URI: http://www.uglyboy.site
+Description: 我的个人WordPress主题
+Version: 3.0
+Author: Uglyboy
+Author URI: http://www.uglyboy.site
+Tags: custom header, fixed width, two columns, widgets
+*/
+
+/*------------------------------------*\
+	MAIN
+\*------------------------------------*/
+header {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.site-title {
+	font-family: sans-serif;
+	font-size: 48px;
+	margin: 0;
+}
+.site-title a {
+	text-decoration: none;
+}
+.site-description {
+	margin: 10px 0;
+	font-size: 18px;
+	color: #767676;
+	font-weight: 600;
+}
+
+aside {
+	font-size:13px;
+}
+
+footer {
+	margin-top: 20px;
+	padding: 20px 0 20px;
+	background-color: #fff;
+	border-top: 1px solid #e0e0e0;
+	font-size: 14px;
+	font-weight: 500;
+	position: relative;
+	text-align: center;
+}
+
+/*------------------------------------*\
+	MENU
+\*------------------------------------*/
+#nav-height{
+  height:60px;
+}
+
+#nav-menu {
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	font-family: sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+#menu ul li {
+	text-align: left;
+	text-transform: none;
+	border-bottom: 1px solid #e0e0e0;
+}
+#menu ul li:last-of-type {
+	border-bottom: 0;
+}
+#menu a{
+	padding: 0.8em 1.5em;
+}
+/*------------------------------------*\
+	PAGES
+\*------------------------------------*/
+
+.updated:not(.published) {
+	display: none;
+}
+
+.navigation {
+	padding: 0 16px;
+	overflow: hidden;
+}
+
+.navigation .nav-previous {
+	float: left;
+	max-width: 50%;
+	padding: 1em;
+}
+
+.navigation .nav-next {
+	float: right;
+	text-align: right;
+	max-width: 50%;
+	padding: 1em;
+}
+
+/*------------------------------------*\
+	ARTICLE
+\*------------------------------------*/
+main img{
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	background-color: transparent;
+}
+
+main .right.floated.image {
+  float: right;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+main .rounded.image,
+main .rounded.image > * {
+  border-radius: 0.3125em;
+}
+
+.typo {
+	font-size:14px;
+}
+
+/*------------------------------------*\
+	COMMENTS
+\*------------------------------------*/
+.comments-title {
+	margin: 0 0 30px 0;
+	font-size: 24px;
+}
+.comments-area ol {
+	list-style: none;
+}
+.comments-area ol {
+	padding: 0;
+}
+.comments-area .children {
+	padding-left: 20px;
+}
+.comments-area .fn {
+	color: #505050;
+}
+.comment-author .avatar {
+	position: absolute;
+}
+.comment-author .fn,
+.comment-metadata {
+	margin-left: 80px;
+}
+.comment-metadata {
+	font-size: 12px;
+	margin-bottom: 30px;
+}
+.comment-body {
+	padding: 15px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #f3f3f3;
+	background-color: #fff;
+}
+.reply {
+	text-align: right;
+}
+.comment-reply-link {
+	padding: 5px;
+	font-size: 12px;
+}
+.comment-meta a {
+	color: #c7c7c7;
+}
+.comments-area a.url {
+	color: #505050;
+	text-decoration: underline;
+}
+.bypostauthor {
+}
+.comment-reply-title {
+	font-size: 25px;
+}
+.comment-form input {
+	width: 100%;
+	max-width: 100%;
+}
+.form-submit input {
+	width: auto;
+}
+/*------------------------------------*\
+	SIDEBAR
+\*------------------------------------*/
+
+/* Default widgets */
+.widget_recent_entries ul,
+.widget_archive ul,
+.widget_pages ul,
+.widget_recent_comments ul,
+.widget_categories ul {
+	list-style: none;
+	padding: 0;
+}
+.widget_recent_entries li::before,
+.widget_archive li::before,
+.widget_pages li::before,
+.widget_recent_comments li::before,
+.widget_categories li::before {
+	content: '>';
+	margin-right: 8px;
+}
+
+.tagcloud a {
+	border: 1px solid;
+	border-radius: 4px; 
+	padding: 5px;
+	font-size: 13px !important;
+	display: inline-block;
+	margin-bottom: 8px;
+	margin-right: 4px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+		 -o-border-radius: 3px;
+			border-radius: 3px;
+	-webkit-transition: all 0.1s;
+	   -moz-transition: all 0.1s;
+		-ms-transition: all 0.1s;
+		 -o-transition: all 0.1s;
+			transition: all 0.1s;
+}
+.tagcloud a:hover {
+	text-decoration:none;
+	color: #fff;
+	background: #d65050;
+	border: 1px solid #d65050;
+}
+
+.widget_calendar table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #e0e0e0;
+}
+.widget_calendar th {
+	background-color: #f5f5f5;
+}
+.widget_calendar table > thead > tr > th,
+.widget_calendar table > tbody > tr > th,
+.widget_calendar table > tfoot > tr > th,
+.widget_calendar table > thead > tr > td,
+.widget_calendar table > tbody > tr > td,
+.widget_calendar table > tfoot > tr > td {
+	padding: 5px;
+	line-height: 1.42857143;
+	vertical-align: top;
+}
+.widget_calendar table > thead > tr > th,
+.widget_calendar table > tbody > tr > th,
+.widget_calendar table > tfoot > tr > th,
+.widget_calendar table > thead > tr > td,
+.widget_calendar table > tbody > tr > td,
+.widget_calendar table > tfoot > tr > td {
+	border: 1px solid #dddddd;
+}
+
+/*------------------------------------*\
+	RESPONSIVE
+\*------------------------------------*/
