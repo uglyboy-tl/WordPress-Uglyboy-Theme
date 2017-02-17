@@ -57,7 +57,7 @@ function uglyboy_scripts()
 
     wp_enqueue_style("pure",get_template_directory_uri() . "/css/pure.min.css",array(),'0.6.0');
     wp_enqueue_style("grids-responsive-min",get_template_directory_uri() . "/css/grids-responsive.min.css",array(),'0.6.0');
-    wp_enqueue_style('typo', get_template_directory_uri() . '/css/typo.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('typo', get_template_directory_uri() . '/css/typo.css', array(), '1.0', 'all');
     wp_enqueue_style('addition', get_template_directory_uri() . '/css/addition.css', array(), '1.0', 'all');
     
     wp_enqueue_style("uglyboy-style",get_template_directory_uri() . "/css/pure-skin-uglyboy.css",array(),'0.6.0');
