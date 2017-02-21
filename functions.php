@@ -55,8 +55,8 @@ function uglyboy_scripts()
     //wp_register_script( 'jquery', '//lib.sinaapp.com/js/jquery/2.2.4/jquery-2.2.4.min.js', array(), '2.2.4' );
     wp_register_script( 'zepto', get_template_directory_uri() . '/css/zepto.min.js', array(), '2.2.4' );
 
-    wp_enqueue_style("pure",get_template_directory_uri() . "/css/pure.min.css",array(),'0.6.0');
-    wp_enqueue_style("grids-responsive-min",get_template_directory_uri() . "/css/grids-responsive.min.css",array(),'0.6.0');
+    wp_enqueue_style("pure",get_template_directory_uri() . "/css/pure.min.css",array(),'0.6.2');
+    wp_enqueue_style("grids-responsive-min",get_template_directory_uri() . "/css/grids-responsive.min.css",array(),'0.6.2');
     wp_enqueue_style('typo', get_template_directory_uri() . '/css/typo.css', array(), '1.0', 'all');
     wp_enqueue_style('addition', get_template_directory_uri() . '/css/addition.css', array(), '1.0', 'all');
     
