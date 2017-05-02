@@ -64,8 +64,8 @@ function uglyboy_scripts()
 
 	wp_enqueue_style('uglyboy', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
 
-    wp_enqueue_style("lightbox",get_template_directory_uri() . "/css/rebox.css",array(),'0.1.0');
-    wp_enqueue_style("lightbox",get_template_directory_uri() . "/js/rebox.js",array('zepto'),'0.1.0');
+    wp_enqueue_style("lightbox-css",get_template_directory_uri() . "/css/rebox.css",array(),'0.1.0');
+    wp_enqueue_style("lightbox-js",get_template_directory_uri() . "/js/rebox.js",array('zepto'),'0.1.0');
 
 
 	//wp_enqueue_script('uglyboyscripts-jquery', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
