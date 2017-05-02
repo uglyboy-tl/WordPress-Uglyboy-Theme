@@ -11,3 +11,7 @@
 		} 
 	});
 })(Zepto)
+
+$(document).ready(function(){
+	$('.typo').rebox({ selector: 'a' });
+});
