@@ -13,5 +13,5 @@
 })(Zepto)
 
 $(document).ready(function(){
-	$('.typo').rebox({ selector: 'a' });
+	$('.typo').rebox({ selector: 'p:not(.read-more) a' });
 });
