@@ -52,23 +52,20 @@ function uglyboy_scripts()
 {
 	// 改用jquery 2.1
 	wp_deregister_script( 'jquery' );
-    //wp_register_script( 'jquery', '//lib.sinaapp.com/js/jquery/2.2.4/jquery-2.2.4.min.js', array(), '2.2.4' );
-    wp_register_script( 'zepto', get_template_directory_uri() . '/css/zepto.min.js', array(), '2.2.4' );
+    wp_register_script( 'zepto', 'https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js', array(), '1.2.0' );
 
-    wp_enqueue_style("pure",get_template_directory_uri() . "/css/pure.min.css",array(),'0.6.2');
-    wp_enqueue_style("grids-responsive-min",get_template_directory_uri() . "/css/grids-responsive.min.css",array(),'0.6.2');
-    wp_enqueue_style('typo', get_template_directory_uri() . '/css/typo.css', array(), '1.0', 'all');
+    wp_enqueue_style("pure","https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css",array(),'1.0.0');
+    wp_enqueue_style("grids-responsive-min","https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css",array(),'1.0.0');
+    wp_enqueue_style('typo', 'https://apps.bdimg.com/libs/typo.css/2.0/typo.css', array(), '2.0', 'all');
+
     wp_enqueue_style('addition', get_template_directory_uri() . '/css/addition.css', array(), '1.0', 'all');
-    
     wp_enqueue_style("uglyboy-style",get_template_directory_uri() . "/css/pure-skin-uglyboy.css",array(),'0.6.0');
 
 	wp_enqueue_style('uglyboy', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
 
-    wp_enqueue_style("lightbox-css",get_template_directory_uri() . "/css/rebox.css",array(),'0.1.0');
-    wp_enqueue_script("lightbox",get_template_directory_uri() . "/js/rebox.js",array('zepto'),'0.1.0');
+    wp_enqueue_style("lightbox-css",get_template_directory_uri() . "/css/lightbox.css",array(),'0.1.0');
+    wp_enqueue_script("lightbox",get_template_directory_uri() . "/js/lightbox.js",array('zepto'),'0.1.0');
 
-
-	//wp_enqueue_script('uglyboyscripts-jquery', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
 	wp_enqueue_script('uglyboyscripts-zepto', get_template_directory_uri() . '/js/scripts.js', array('zepto'), '1.0.0'); // Custom scripts
 
 }
