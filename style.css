@@ -17,6 +17,12 @@ header {
 	font-weight: 500;
 }
 
+header div,
+header ul,
+header a{
+    background: #f7f3f0;
+}
+
 .site-title {
 	font-family: sans-serif;
 	font-size: 48px;
@@ -50,11 +56,12 @@ footer {
 /*------------------------------------*\
 	MENU
 \*------------------------------------*/
-#nav-height{
+#nav-box{
   height:60px;
 }
 
-#nav-menu {
+#nav>div.pure-menu {
+	width:100%;
 	border-top: 1px solid #e0e0e0;
 	border-bottom: 1px solid #e0e0e0;
 	font-family: sans-serif;
@@ -62,15 +69,15 @@ footer {
 	font-size: 14px;
 }
 
-#menu ul li {
+.pure-menu ul li {
 	text-align: left;
 	text-transform: none;
 	border-bottom: 1px solid #e0e0e0;
 }
-#menu ul li:last-of-type {
+.pure-menu ul li:last-of-type {
 	border-bottom: 0;
 }
-#menu a{
+.pure-menu a{
 	padding: 0.8em 1.5em;
 }
 /*------------------------------------*\
@@ -265,3 +272,134 @@ main .rounded.image > * {
 /*------------------------------------*\
 	RESPONSIVE
 \*------------------------------------*/
+
+
+/*------------------------------------*\
+	MENU
+\*------------------------------------*/
+#menu {
+    display: none;
+}
+
+@media (max-width: 48em) {
+
+    /* 默认隐藏菜单 */
+    #nav div.pure-menu ul,
+    #nav .pure-menu-allow-hover ul {
+        display: none;
+    }
+
+    /* 显示菜单 */
+    #menu,
+    #nav div.pure-menu ul.show-menu,
+    #nav .pure-menu-allow-hover ul.show-menu {
+        display: block;
+    }
+
+    /* 小屏幕菜单标识 */
+    #nav {
+        position: relative;
+    }
+
+    #menu {
+        color: transparent;
+    }
+
+    #menu span,
+    #menu span::after,
+    #menu span::before {
+        /* these are the 3 lines of the menu icon */
+        position: absolute;
+        background-color: #1A1A1A;
+        height: 0.2em;
+        width: 1em;
+    }
+
+    #menu span {
+        top: 1.4em;
+        right: 0.5em;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transition: background-color .3s;
+        transition: background-color .3s;
+    }
+
+    #menu span::after,
+    #menu span::before {
+        content: '';
+        left: 0;
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+    }
+
+    #menu span::before {
+        -webkit-transform: translateY(-0.4em);
+        -ms-transform: translateY(-0.4em);
+        transform: translateY(-0.4em);
+    }
+
+    #menu span::after {
+        -webkit-transform: translateY(0.4em);
+        -ms-transform: translateY(0.4em);
+        transform: translateY(0.4em);
+    }
+
+    #menu.opened span {
+        background-color: transparent;
+    }
+
+    #menu.opened span::before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    #menu.opened span::after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    /* 小屏幕子菜单标识 */
+    span.submenu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        border-left: 0.1em solid rgba(120, 120, 120, 0.15);
+        height: 2.8em;
+        width: 2.8em;
+        cursor: pointer;
+    }
+
+    span.submenu::after {
+        content: '';
+        position: absolute;
+        top: 0.95em;
+        left: 1.35em;
+        display: block;
+        width: 0.1em;
+        height: 0.9em;
+        background: #1A1A1A;
+        z-index: 99;
+    }
+
+    span.submenu::before {
+        content: '';
+        position: absolute;
+        left: 0.95em;
+        top: 1.35em;
+        display: block;
+        width: 0.9em;
+        height: 0.1em;
+        background: #1A1A1A;
+        z-index: 99;
+    }
+
+    span.submenu.opened:after {
+        display: none;
+    }
+}

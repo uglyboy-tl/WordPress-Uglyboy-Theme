@@ -4,19 +4,21 @@
  */
 
 get_header(); ?>
+<main class="pure-g">
+    <div class="pure-u-1 pure-u-md-2-3">
 
-	<main class="pure-u-1 pure-u-md-2-3">
-
-		<?php
+        <?php
 			if(is_archive()):
 				the_archive_title( '<h4 class="divider">', '</h4>' );
 			elseif(is_search()):
 		?>
-			<h2 class="divider"><?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?></h2>
-		<?php endif ?>
-		<?php if (have_posts()): ?>
+        <h2 class="divider">
+            <?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?>
+        </h2>
+        <?php endif ?>
+        <?php if (have_posts()): ?>
 
-			<?php
+        <?php
 			// Start the Loop.
 			while (have_posts()) : the_post();
 				
@@ -33,16 +35,20 @@ get_header(); ?>
 				comments_template();
 			}
 		?>
-		<?php else: ?>
+        <?php else: ?>
 
-			<!-- article -->
-			<article>
-				<h2><?php _e( 'Sorry, nothing to display.', 'uglyboy' ); ?></h2>
-			</article>
-			<!-- /article -->
+        <!-- article -->
+        <article>
+            <h2>
+                <?php _e( 'Sorry, nothing to display.', 'uglyboy' ); ?>
+            </h2>
+        </article>
+        <!-- /article -->
 
-		<?php endif; ?>
-	</main>
-
-<?php get_sidebar(); ?>
+        <?php endif; ?>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+        <?php get_sidebar(); ?>
+    </div>
+</main>
 <?php get_footer(); ?>
