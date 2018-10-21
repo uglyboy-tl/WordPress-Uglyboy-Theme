@@ -1,277 +1,15 @@
 /*
-Theme Name: Uglyboy
-Theme URI: http://www.uglyboy.site
-Description: 我的个人WordPress主题
-Version: 3.0
-Author: Uglyboy
-Author URI: http://www.uglyboy.site
-Tags: custom header, fixed width, two columns, widgets
+	Theme Name: Uglyboy
+	Theme URI: https://www.uglyboy.cn
+	Description: Uglyboy WordPress Theme
+	Version: 2.0.0
+	Author: uglyboy (@toddmotto)
+	Author URI: https://www.uglyboy.cn
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
 */
-
-/*------------------------------------*\
-	MAIN
-\*------------------------------------*/
-header {
-	text-align: center;
-	font-size: 16px;
-	font-weight: 500;
-}
-
-header div,
-header ul,
-header a{
-    background: #f7f3f0;
-}
-
-.site-title {
-	font-family: sans-serif;
-	font-size: 48px;
-	margin: 0;
-}
-.site-title a {
-	text-decoration: none;
-}
-.site-description {
-	margin: 10px 0;
-	font-size: 18px;
-	color: #767676;
-	font-weight: 600;
-}
-
-aside {
-	font-size:13px;
-}
-
-footer {
-	margin-top: 20px;
-	padding: 20px 0 20px;
-	background-color: #fff;
-	border-top: 1px solid #e0e0e0;
-	font-size: 14px;
-	font-weight: 500;
-	position: relative;
-	text-align: center;
-}
-
-/*------------------------------------*\
-	MENU
-\*------------------------------------*/
-#nav-box{
-  height:60px;
-}
-
-#nav>div.pure-menu {
-	width:100%;
-	border-top: 1px solid #e0e0e0;
-	border-bottom: 1px solid #e0e0e0;
-	font-family: sans-serif;
-	font-weight: 700;
-	font-size: 14px;
-}
-
-.pure-menu ul li {
-	text-align: left;
-	text-transform: none;
-	border-bottom: 1px solid #e0e0e0;
-}
-.pure-menu ul li:last-of-type {
-	border-bottom: 0;
-}
-.pure-menu a{
-	padding: 0.8em 1.5em;
-}
-/*------------------------------------*\
-	PAGES
-\*------------------------------------*/
-
-.updated:not(.published) {
-	display: none;
-}
-
-.navigation {
-	padding: 0 16px;
-	overflow: hidden;
-}
-
-.navigation .nav-previous {
-	float: left;
-	max-width: 50%;
-	padding: 1em;
-}
-
-.navigation .nav-next {
-	float: right;
-	text-align: right;
-	max-width: 50%;
-	padding: 1em;
-}
-
-/*------------------------------------*\
-	ARTICLE
-\*------------------------------------*/
-main img{
-	height: auto;
-	display: inline-block;
-	vertical-align: middle;
-	max-width: 100%;
-	background-color: transparent;
-}
-
-main .right.floated.image {
-  float: right;
-  margin-right: 0em;
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
-
-main .rounded.image,
-main .rounded.image > * {
-  border-radius: 0.3125em;
-}
-
-.typo {
-	font-size:14px;
-}
-
-/*------------------------------------*\
-	COMMENTS
-\*------------------------------------*/
-.comments-title {
-	margin: 0 0 30px 0;
-	font-size: 24px;
-}
-.comments-area ol {
-	list-style: none;
-}
-.comments-area ol {
-	padding: 0;
-}
-.comments-area .children {
-	padding-left: 20px;
-}
-.comments-area .fn {
-	color: #505050;
-}
-.comment-author .avatar {
-	position: absolute;
-}
-.comment-author .fn,
-.comment-metadata {
-	margin-left: 80px;
-}
-.comment-metadata {
-	font-size: 12px;
-	margin-bottom: 30px;
-}
-.comment-body {
-	padding: 15px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #f3f3f3;
-	background-color: #fff;
-}
-.reply {
-	text-align: right;
-}
-.comment-reply-link {
-	padding: 5px;
-	font-size: 12px;
-}
-.comment-meta a {
-	color: #c7c7c7;
-}
-.comments-area a.url {
-	color: #505050;
-	text-decoration: underline;
-}
-
-.comment-reply-title {
-	font-size: 25px;
-}
-.comment-form input {
-	width: 100%;
-	max-width: 100%;
-}
-.form-submit input {
-	width: auto;
-}
-/*------------------------------------*\
-	SIDEBAR
-\*------------------------------------*/
-
-/* Default widgets */
-.widget_recent_entries ul,
-.widget_archive ul,
-.widget_pages ul,
-.widget_recent_comments ul,
-.widget_categories ul {
-	list-style: none;
-	padding: 0;
-}
-.widget_recent_entries li::before,
-.widget_archive li::before,
-.widget_pages li::before,
-.widget_recent_comments li::before,
-.widget_categories li::before {
-	content: '>';
-	margin-right: 8px;
-}
-
-.tagcloud a {
-	border: 1px solid;
-	border-radius: 4px; 
-	padding: 5px;
-	font-size: 13px !important;
-	display: inline-block;
-	margin-bottom: 8px;
-	margin-right: 4px;
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-		 -o-border-radius: 3px;
-			border-radius: 3px;
-	-webkit-transition: all 0.1s;
-	   -moz-transition: all 0.1s;
-		-ms-transition: all 0.1s;
-		 -o-transition: all 0.1s;
-			transition: all 0.1s;
-}
-.tagcloud a:hover {
-	text-decoration:none;
-	color: #fff;
-	background: #d65050;
-	border: 1px solid #d65050;
-}
-
-.widget_calendar table {
-	width: 100%;
-	margin-bottom: 20px;
-	border: 1px solid #e0e0e0;
-}
-.widget_calendar th {
-	background-color: #f5f5f5;
-}
-.widget_calendar table > thead > tr > th,
-.widget_calendar table > tbody > tr > th,
-.widget_calendar table > tfoot > tr > th,
-.widget_calendar table > thead > tr > td,
-.widget_calendar table > tbody > tr > td,
-.widget_calendar table > tfoot > tr > td {
-	padding: 5px;
-	line-height: 1.42857143;
-	vertical-align: top;
-}
-.widget_calendar table > thead > tr > th,
-.widget_calendar table > tbody > tr > th,
-.widget_calendar table > tfoot > tr > th,
-.widget_calendar table > thead > tr > td,
-.widget_calendar table > tbody > tr > td,
-.widget_calendar table > tfoot > tr > td {
-	border: 1px solid #dddddd;
-}
-
-/*------------------------------------*\
-	RESPONSIVE
-\*------------------------------------*/
-
 
 /*------------------------------------*\
 	MENU
@@ -283,20 +21,20 @@ main .rounded.image > * {
 @media (max-width: 48em) {
 
     /* 默认隐藏菜单 */
-    #nav div.pure-menu ul,
-    #nav .pure-menu-allow-hover ul {
+    nav>div.pure-menu ul.pure-menu-list,
+    nav .pure-menu-allow-hover ul {
         display: none;
     }
 
     /* 显示菜单 */
     #menu,
-    #nav div.pure-menu ul.show-menu,
-    #nav .pure-menu-allow-hover ul.show-menu {
+    nav>div.pure-menu ul.show-menu,
+    nav .pure-menu-allow-hover ul.show-menu {
         display: block;
     }
 
     /* 小屏幕菜单标识 */
-    #nav {
+    nav {
         position: relative;
     }
 
@@ -316,7 +54,7 @@ main .rounded.image > * {
 
     #menu span {
         top: 1.4em;
-        right: 0.5em;
+        left: 1.5em;
         -webkit-transform: translateX(-50%) translateY(-50%);
         -ms-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
@@ -401,4 +139,50 @@ main .rounded.image > * {
     span.submenu.opened:after {
         display: none;
     }
+}
+
+
+/* Temp */
+header,
+footer {
+    text-align: center;
+}
+
+#logo {
+    z-index: -1;
+    top:0;
+}
+
+nav,
+main {
+    background: #fff;
+}
+
+nav>div.pure-menu {
+    width: 100%;
+    background: #fff;
+}
+
+
+main,aside{
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+section {
+    margin-top: 1em;
+    padding: 0 1em;
+}
+
+section div.typo{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+footer{
+    margin-top: 2em; 
+    padding: 2em;
+    z-index: 3;
+    color: #fff;
+    background: #1A1A1A;
 }

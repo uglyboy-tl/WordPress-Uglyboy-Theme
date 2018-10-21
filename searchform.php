@@ -1,8 +1,5 @@
 <!-- search -->
 <form class="pure-form" method="get" action="<?php echo home_url(); ?>" role="search">
-	<div class="">
-		<i class="circular search link icon"></i>
-		<input type="text" placeholder="<?php _e( 'To search, type and hit enter.', 'uglyboy' ); ?>" value name="s" class="pure-input-1">
-	</div>
+    <input class="pure-input-1" type="search" name="s" placeholder="<?php _e( 'To search, type and hit enter.', 'html5blank' ); ?>">
 </form>
 <!-- /search -->

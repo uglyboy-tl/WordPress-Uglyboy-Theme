@@ -1,14 +1,24 @@
 <!-- footer -->
-<footer class="pure-g">
-	<div class="pure-u-1">
-		<!-- copyright -->
-		<span class=""><?php _e( 'Copyright', 'uglyboy' ); ?> &copy; <?php echo date('Y'); ?> <a href="<?php echo home_url(); ?>" title="UglyBoy"><?php bloginfo('name'); ?></a>.
-		</span>
-		<!-- /copyright -->
-	</div>
+<footer class="pure-u-1" role="contentinfo">
+
+    <!-- copyright -->
+    <p class="copyright">
+        &copy;
+        <?php echo date('Y'); ?> Copyright
+        <?php bloginfo('name'); ?>.
+        <?php _e('Powered by', 'html5blank'); ?>
+        <a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5
+            Blank</a>.
+    </p>
+    <!-- /copyright -->
+
 </footer>
 <!-- /footer -->
 
+</div>
+<!-- /wrapper -->
+
 <?php wp_footer(); ?>
 </body>
+
 </html>
