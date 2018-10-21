@@ -151,6 +151,7 @@ footer {
 #logo {
     z-index: -1;
     top:0;
+    left:0;
 }
 
 nav,
@@ -161,28 +162,9 @@ main {
 nav>div.pure-menu {
     width: 100%;
     background: #fff;
+    position: absolute;
 }
 
-
-main,aside{
-    padding-left: 2%;
-    padding-right: 2%
-}
-
-section {
-    margin-top: 1em;
-    padding: 0 1em;
-}
-
-section div.typo{
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-}
-
-footer{
-    margin-top: 2em; 
-    padding: 2em;
-    z-index: 3;
-    color: #fff;
-    background: #1A1A1A;
+nav>div.pure-menu.pure-menu-fixed{
+    position: fixed;
 }

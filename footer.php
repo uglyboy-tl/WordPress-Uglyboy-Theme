@@ -1,4 +1,7 @@
 <!-- footer -->
+</div>
+<!-- /wrapper -->
+
 <footer class="pure-u-1" role="contentinfo">
 
     <!-- copyright -->
@@ -14,9 +17,6 @@
 
 </footer>
 <!-- /footer -->
-
-</div>
-<!-- /wrapper -->
 
 <?php wp_footer(); ?>
 </body>

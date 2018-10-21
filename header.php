@@ -22,43 +22,44 @@
 
 <body <?php body_class(); ?>>
 
+
+    <!-- header -->
+    <header class="pure-u-1" role="banner">
+
+        <!-- logo -->
+        <div class="pure-u-1" id='logo'>
+            <a href="<?php echo home_url(); ?>">
+                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <?php bloginfo( 'name' ); ?></a></h1>
+                <h3 class="site-description">
+                    <?php bloginfo( 'description' ); ?>
+                </h3>
+                <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+            </a>
+        </div>
+        <!-- /logo -->
+
+        <!-- nav -->
+        <nav class="pure-u-1" role="navigation">
+            <div class="pure-menu pure-menu-horizontal">
+                <?php wp_nav_menu( array(
+                'theme_location'  => 'header-menu',
+                'container' => 'div',
+                'container_class' => 'pure-menu pure-menu-horizontal',
+                'container_id' => '',
+                'menu_class' => 'pure-menu-list',
+                'menu_id' => '',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth'           => 2, // currently there is a bug that prevents a depth > 2 from displaying correctly
+                'walker' => new Uglyboy_Walker()
+            )); ?>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+    </header>
+    <!-- /header -->
+    
     <!-- wrapper -->
     <div class="pure-g">
-
-        <!-- header -->
-        <header class="pure-u-1" role="banner">
-
-            <!-- logo -->
-            <div class="pure-u-1" id='logo'>
-                <a href="<?php echo home_url(); ?>">
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <?php bloginfo( 'name' ); ?></a></h1>
-                    <h3 class="site-description">
-                        <?php bloginfo( 'description' ); ?>
-                    </h3>
-                    <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-                </a>
-            </div>
-            <!-- /logo -->
-
-            <!-- nav -->
-            <nav class="pure-u-1" role="navigation">
-                <div class="pure-menu pure-menu-horizontal">
-                    <?php wp_nav_menu( array(
-                    'theme_location'  => 'header-menu',
-                    'container' => 'div',
-                    'container_class' => 'pure-menu pure-menu-horizontal',
-                    'container_id' => '',
-                    'menu_class' => 'pure-menu-list',
-                    'menu_id' => '',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'depth'           => 2, // currently there is a bug that prevents a depth > 2 from displaying correctly
-                    'walker' => new Uglyboy_Walker()
-				)); ?>
-                </div>
-            </nav>
-            <!-- /nav -->
-
-        </header>
-        <!-- /header -->
