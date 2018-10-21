@@ -64,30 +64,6 @@ if (function_exists('add_theme_support'))
 require get_template_directory() . '/menu.php';
 // HTML5 Blank navigation
 
-function html5blank_nav()
-{
-	wp_nav_menu(
-	array(
-		'theme_location'  => 'header-menu',
-		'menu'            => '',
-		'container'       => 'div',
-		'container_class' => 'pure-menu pure-menu-horizontal',
-		'container_id'    => '',
-		'menu_class'      => 'pure-menu-list',
-		'menu_id'         => '',
-		'echo'            => true,
-		'fallback_cb'     => 'wp_page_menu',
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
-		'depth'           => 0,
-		'walker'          => ''
-		)
-	);
-}
-
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {
@@ -103,7 +79,7 @@ function html5blank_header_scripts()
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
         wp_deregister_script( 'jquery' );
-        wp_register_script( 'zepto', 'https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js', array(), '1.2.0' );
+        wp_register_script( 'zepto', 'https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js', array(), '1.2.0' );
         
         wp_enqueue_script("lightbox",get_template_directory_uri() . "/js/lightbox.js",array('zepto'),'0.1.0');
     }
@@ -121,13 +97,10 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_enqueue_style("pure","https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css",array(),'1.0.0');
-    wp_enqueue_style("grids-responsive-min","https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css",array(),'1.0.0');
+    wp_enqueue_style("pure","https://cdn.bootcss.com/pure/1.0.0/pure-min.css",array(),'1.0.0');
+    wp_enqueue_style("grids-responsive-min","https://cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css",array(),'1.0.0');
     wp_enqueue_style('typo', 'https://apps.bdimg.com/libs/typo.css/2.0/typo.css', array(), '2.0', 'all');
     
-    wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-    wp_enqueue_style('normalize'); // Enqueue it!
-
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
     
