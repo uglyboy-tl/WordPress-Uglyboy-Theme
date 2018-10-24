@@ -29,7 +29,7 @@
         <?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'uglyboy' ), __( '1 Comment', 'uglyboy' ), __( '% Comments', 'uglyboy' )); ?></span>
     <!-- /post details -->
 
-    <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+    <?php uglywp_excerpt('uglywp_index'); // Build your custom callback length in functions.php ?>
 
     <?php edit_post_link(); ?>
 
