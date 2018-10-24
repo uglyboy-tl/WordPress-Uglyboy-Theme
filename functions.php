@@ -183,6 +183,6 @@ function disable_embeds_flush_rewrite_rules() {
  
 register_deactivation_hook( __FILE__, 'disable_embeds_flush_rewrite_rules' );
 
-
+// 菜单组件
 require get_template_directory() . '/inc/menu.php';
 ?>

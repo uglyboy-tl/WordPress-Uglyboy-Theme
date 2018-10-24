@@ -1,24 +1,64 @@
-<div class="comments">
-	<?php if (post_password_required()) : ?>
-	<p><?php _e( 'Post is password protected. Enter the password to view any comments.', 'uglyboy' ); ?></p>
-</div>
+<?php
+/**
+ * @package WordPress
+ */
 
-	<?php return; endif; ?>
+if ( post_password_required() ) {
+	return;
+}
+?>
 
-<?php if (have_comments()) : ?>
+<div id="comments" class="segment">
 
-	<h2><?php comments_number(); ?></h2>
+	<?php // You can start editing here -- including this comment! ?>
 
-	<ul>
-		<?php wp_list_comments('type=comment&callback=uglyboycomments'); // Custom callback in functions.php ?>
-	</ul>
+	<?php if ( have_comments() ) : ?>
+		<h4 class="comment-title">
+			<?php
+				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sydney' ),
+					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+			?>
+		</h4>
 
-<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<nav id="comment-nav-above" class="navigation">
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'sydney' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'sydney' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'sydney' ) ); ?></div>
+		</nav><!-- #comment-nav-above -->
+		<?php endif; // check for comment navigation ?>
 
-	<p><?php _e( 'Comments are closed here.', 'uglyboy' ); ?></p>
+		<ol class="comments-list">
+			<?php
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+					'avatar_size'=> 60,
+				) );
+			?>
+		</ol><!-- .comment-list -->
 
-<?php endif; ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<nav id="comment-nav-below" class="navigation">
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'sydney' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'sydney' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'sydney' ) ); ?></div>
+		</nav><!-- #comment-nav-below -->
+		<?php endif; // check for comment navigation ?>
 
-<?php comment_form(); ?>
+	<?php endif; // have_comments() ?>
 
-</div>
+	<?php
+		// If comments are closed and there are comments, let's leave a little note, shall we?
+		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	?>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'sydney' ); ?></p>
+	<?php endif; ?>
+
+	<?php 
+		$args = array(
+			'comment_notes_after'  => '',
+		);
+		comment_form($args);
+	?>
+</div><!-- #comments -->

@@ -12,8 +12,6 @@
             <h2 class="divider"><?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?></h2>
         <?php endif ?>
 
-        <?php if (have_posts()): ?>
-
         <?php
 
         get_template_part('loop');
@@ -26,15 +24,6 @@
             comments_template();
         }
         ?>
-        <?php else: ?>
-
-        <!-- article -->
-        <article>
-            <h2><?php _e( 'Sorry, nothing to display.', 'uglyboy' ); ?></h2>
-        </article>
-        <!-- /article -->
-
-        <?php endif; ?>
 
     </section>
     <!-- /section -->
