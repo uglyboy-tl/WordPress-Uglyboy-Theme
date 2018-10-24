@@ -89,15 +89,15 @@ msgstr "附加菜单"
 
 #: ../functions.php:181
 msgid "Widget Area 1"
-msgstr "Zone de widget 1"
+msgstr "组件区域 1"
 
 #: ../functions.php:182 ../functions.php:193
 msgid "Description for this widget-area..."
-msgstr "Description pour cette zone à widget..."
+msgstr "该组件区域的描述..."
 
 #: ../functions.php:192
 msgid "Widget Area 2"
-msgstr "Zone de widget 2"
+msgstr "组建区域 2"
 
 #: ../functions.php:258
 msgid "View Article"
