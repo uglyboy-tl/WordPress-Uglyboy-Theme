@@ -2,33 +2,36 @@
 
 <!-- article -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('typo'); ?>>
+    <div class="header">
+        <!-- post thumbnail -->
+        <div>
+        <?php if ( !is_singular() && has_post_thumbnail()) : // Check if Thumbnail exists ?>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                <?php the_post_thumbnail(array(120,120),array('class' => 'right floated rounded image'));// Fullsize image for the single post ?>
+            </a>
+        <?php endif; ?>
+        </div>
+        <!-- /post thumbnail -->
 
-    <!-- post thumbnail -->
-    <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-        <?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-    </a>
-    <?php endif; ?>
-    <!-- /post thumbnail -->
+        <!-- post title -->
+        <h2>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                <?php the_title(); ?></a>
+        </h2>
+        <!-- /post title -->
 
-    <!-- post title -->
-    <h2>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-            <?php the_title(); ?></a>
-    </h2>
-    <!-- /post title -->
-
-    <!-- post details -->
-    <span class="date">
-        <?php the_time('F j, Y'); ?>
-        <?php the_time('g:i a'); ?></span>
-    <span class="author">
-        <?php _e( 'Published by', 'uglyboy' ); ?>
-        <?php the_author_posts_link(); ?></span>
-    <span class="comments">
-        <?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'uglyboy' ), __( '1 Comment', 'uglyboy' ), __( '% Comments', 'uglyboy' )); ?></span>
-    <!-- /post details -->
-
+        <!-- post details -->
+        <span class="date">
+            <?php the_time('F j, Y'); ?>
+            <?php the_time('g:i a'); ?></span>
+        <span class="author">
+            <?php _e( 'Published by', 'uglyboy' ); ?>
+            <?php the_author_posts_link(); ?></span>
+        <span class="comments">
+            <?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'uglyboy' ), __( '1 Comment', 'uglyboy' ), __( '% Comments', 'uglyboy' )); ?></span>
+        <!-- /post details -->
+	</div><!-- .entry-header -->
+    
     <?php the_excerpt();?>
 
     <?php edit_post_link(); ?>
