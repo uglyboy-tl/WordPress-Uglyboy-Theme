@@ -32,7 +32,7 @@
         <article>
 
             <h2>
-                <?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?>
+                <?php _e( 'Sorry, nothing to display.', 'uglyboy' ); ?>
             </h2>
 
         </article>

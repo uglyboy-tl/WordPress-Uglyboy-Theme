@@ -5,7 +5,7 @@
     <section>
 
         <h1>
-            <?php _e( 'Latest Posts', 'html5blank' ); ?>
+            <?php _e( 'Latest Posts', 'uglyboy' ); ?>
         </h1>
 
         <?php get_template_part('loop'); ?>

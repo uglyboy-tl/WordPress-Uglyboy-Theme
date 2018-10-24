@@ -7,7 +7,7 @@
         <?php if (have_posts()): the_post(); ?>
 
         <h1>
-            <?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?>
+            <?php _e( 'Author Archives for ', 'uglyboy' ); echo get_the_author(); ?>
         </h1>
 
         <?php if ( get_the_author_meta('description')) : ?>
@@ -15,7 +15,7 @@
         <?php echo get_avatar(get_the_author_meta('user_email')); ?>
 
         <h2>
-            <?php _e( 'About ', 'html5blank' ); echo get_the_author() ; ?>
+            <?php _e( 'About ', 'uglyboy' ); echo get_the_author() ; ?>
         </h2>
 
         <?php echo wpautop( get_the_author_meta('description') ); ?>
@@ -47,10 +47,10 @@
                 <?php the_time('F j, Y'); ?>
                 <?php the_time('g:i a'); ?></span>
             <span class="author">
-                <?php _e( 'Published by', 'html5blank' ); ?>
+                <?php _e( 'Published by', 'uglyboy' ); ?>
                 <?php the_author_posts_link(); ?></span>
             <span class="comments">
-                <?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+                <?php comments_popup_link( __( 'Leave your thoughts', 'uglyboy' ), __( '1 Comment', 'uglyboy' ), __( '% Comments', 'uglyboy' )); ?></span>
             <!-- /post details -->
 
             <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
@@ -70,7 +70,7 @@
         <article>
 
             <h2>
-                <?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?>
+                <?php _e( 'Sorry, nothing to display.', 'uglyboy' ); ?>
             </h2>
 
         </article>

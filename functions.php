@@ -1,7 +1,7 @@
 <?php
 /*
- *  Author: Todd Motto | @toddmotto
- *  URL: html5blank.com | @html5blank
+ *  Author: uglyboy | @uglyboy
+ *  URL: uglyboy.cn | @uglyboy
  *  Custom functions, support, custom post types and more.
  */
 
@@ -55,17 +55,17 @@ if (function_exists('add_theme_support'))
     add_theme_support('automatic-feed-links');
 
     // Localisation Support
-    load_theme_textdomain('html5blank', get_template_directory() . '/languages');
+    load_theme_textdomain('uglyboy', get_template_directory() . '/languages');
 }
 
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
-require get_template_directory() . '/menu.php';
-// HTML5 Blank navigation
+require get_template_directory() . '/inc/menu.php';
+// Uglyboy navigation
 
-// Load HTML5 Blank scripts (header.php)
-function html5blank_header_scripts()
+// Load Uglyboy scripts (header.php)
+function uglyboy_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
@@ -75,8 +75,8 @@ function html5blank_header_scripts()
         //wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         //wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('zepto'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('html5blankscripts'); // Enqueue it!
+        wp_register_script('uglyboyscripts', get_template_directory_uri() . '/js/scripts.js', array('zepto'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('uglyboyscripts'); // Enqueue it!
 
         wp_deregister_script( 'jquery' );
         wp_register_script( 'zepto', 'https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js', array(), '1.2.0' );
@@ -85,8 +85,8 @@ function html5blank_header_scripts()
     }
 }
 
-// Load HTML5 Blank conditional scripts
-function html5blank_conditional_scripts()
+// Load Uglyboy conditional scripts
+function uglyboy_conditional_scripts()
 {
     if (is_page('pagenamehere')) {
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
@@ -94,15 +94,15 @@ function html5blank_conditional_scripts()
     }
 }
 
-// Load HTML5 Blank styles
-function html5blank_styles()
+// Load Uglyboy styles
+function uglyboy_styles()
 {
     wp_enqueue_style("pure","https://cdn.bootcss.com/pure/1.0.0/pure-min.css",array(),'1.0.0');
     wp_enqueue_style("grids-responsive-min","https://cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css",array(),'1.0.0');
     wp_enqueue_style('typo', 'https://apps.bdimg.com/libs/typo.css/2.0/typo.css', array(), '2.0', 'all');
     
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_enqueue_style('html5blank'); // Enqueue it!
+    wp_register_style('uglyboy', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('uglyboy'); // Enqueue it!
     
     wp_register_style('skin', get_template_directory_uri() . '/css/skin-md.css', array(), '1.0', 'all');
     wp_enqueue_style('skin'); // Enqueue it!  
@@ -110,13 +110,13 @@ function html5blank_styles()
     wp_enqueue_style("lightbox-css",get_template_directory_uri() . "/css/lightbox.css",array(),'0.1.0');
 }
 
-// Register HTML5 Blank Navigation
+// Register Uglyboy Navigation
 function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
-        'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'header-menu' => __('Header Menu', 'uglyboy'), // Main Navigation
+        'sidebar-menu' => __('Sidebar Menu', 'uglyboy'), // Sidebar Navigation
+        'extra-menu' => __('Extra Menu', 'uglyboy') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
@@ -162,8 +162,8 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
+        'name' => __('Widget Area 1', 'uglyboy'),
+        'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -173,8 +173,8 @@ if (function_exists('register_sidebar'))
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Widget Area 2', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
+        'name' => __('Widget Area 2', 'uglyboy'),
+        'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -239,7 +239,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'uglyboy') . '</a>';
 }
 
 // Remove Admin bar
@@ -262,7 +262,7 @@ function remove_thumbnail_dimensions( $html )
 }
 
 // Custom Gravatar in Settings > Discussion
-function html5blankgravatar ($avatar_defaults)
+function uglyboygravatar ($avatar_defaults)
 {
     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
@@ -280,7 +280,7 @@ function enable_threaded_comments()
 }
 
 // Custom Comments Callback
-function html5blankcomments($comment, $args, $depth)
+function uglyboycomments($comment, $args, $depth)
 {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
@@ -332,12 +332,12 @@ function html5blankcomments($comment, $args, $depth)
 \*------------------------------------*/
 
 // Add Actions
-add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
+add_action('init', 'uglyboy_header_scripts'); // Add Custom Scripts to wp_head
+add_action('wp_print_scripts', 'uglyboy_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
-add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
-add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+add_action('wp_enqueue_scripts', 'uglyboy_styles'); // Add Theme Stylesheet
+add_action('init', 'register_html5_menu'); // Add Uglyboy Menu
+add_action('init', 'create_post_type_html5'); // Add our Uglyboy Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -442,7 +442,7 @@ register_deactivation_hook( __FILE__, 'disable_embeds_flush_rewrite_rules' );
 
 
 // Add Filters
-add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Settings > Discussion
+add_filter('avatar_defaults', 'uglyboygravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
@@ -481,18 +481,18 @@ function create_post_type_html5()
     register_post_type('html5-blank', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
-            'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
-            'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
-            'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
-            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
+            'name' => __('Uglyboy Custom Post', 'uglyboy'), // Rename these to suit
+            'singular_name' => __('Uglyboy Custom Post', 'uglyboy'),
+            'add_new' => __('Add New', 'uglyboy'),
+            'add_new_item' => __('Add New Uglyboy Custom Post', 'uglyboy'),
+            'edit' => __('Edit', 'uglyboy'),
+            'edit_item' => __('Edit Uglyboy Custom Post', 'uglyboy'),
+            'new_item' => __('New Uglyboy Custom Post', 'uglyboy'),
+            'view' => __('View Uglyboy Custom Post', 'uglyboy'),
+            'view_item' => __('View Uglyboy Custom Post', 'uglyboy'),
+            'search_items' => __('Search Uglyboy Custom Post', 'uglyboy'),
+            'not_found' => __('No Uglyboy Custom Posts found', 'uglyboy'),
+            'not_found_in_trash' => __('No Uglyboy Custom Posts found in Trash', 'uglyboy')
         ),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
@@ -502,7 +502,7 @@ function create_post_type_html5()
             'editor',
             'excerpt',
             'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        ), // Go to Dashboard Custom Uglyboy post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
             'post_tag',

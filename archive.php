@@ -5,7 +5,7 @@
     <section>
 
         <h1>
-            <?php _e( 'Archives', 'html5blank' ); ?>
+            <?php _e( 'Archives', 'uglyboy' ); ?>
         </h1>
 
         <?php get_template_part('loop'); ?>
