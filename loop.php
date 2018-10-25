@@ -1,7 +1,7 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 <!-- article -->
-<article id="post-<?php the_ID(); ?>" <?php post_class('typo'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="header">
         <!-- post thumbnail -->
         <div>
@@ -31,8 +31,9 @@
             <?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'uglyboy' ), __( '1 Comment', 'uglyboy' ), __( '% Comments', 'uglyboy' )); ?></span>
         <!-- /post details -->
 	</div><!-- .entry-header -->
-    
-    <?php the_excerpt();?>
+    <div class="typo">
+        <?php the_excerpt();?>
+    </div>
 
     <?php edit_post_link(); ?>
 
