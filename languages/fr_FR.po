@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: HTML5 Blank WordPress Theme\n"
+"Project-Id-Version: Uglyboy WordPress Theme\n"
 "POT-Creation-Date: 2014-01-08 00:08+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Antoine Lorence <antoine.lorence@gmail.com>\n"

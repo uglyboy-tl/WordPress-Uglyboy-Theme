@@ -18,7 +18,7 @@
     display: none;
 }
 
-@media (max-width: 48em) {
+@media only screen and (max-width: 47.99em) {
 
     /* 默认隐藏菜单 */
     nav>div.pure-menu ul.pure-menu-list,
@@ -143,17 +143,6 @@
 
 
 /* Temp */
-header,
-footer {
-    text-align: center;
-}
-
-#logo {
-    z-index: -1;
-    top:0;
-    left:0;
-}
-
 nav,
 main {
     background: #fff;
@@ -165,6 +154,18 @@ nav>div.pure-menu {
     position: absolute;
 }
 
-nav>div.pure-menu.pure-menu-fixed{
-    position: fixed;
+article div.typo img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;	
+}
+
+body>div.pure-g{
+    margin: 0 auto;
+}
+
+#calendar_wrap table{
+    width: 100%;
+    margin: 0.5em auto;
 }

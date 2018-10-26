@@ -1,21 +1,40 @@
 <?php get_header(); ?>
 
-<main class="pure-u-1 pure-u-md-2-3" role="main">
-    <!-- section -->
-    <section>
+<!-- wrapper -->
+<div class="pure-g">
 
-        <h1>
-            <?php _e( 'Latest Posts', 'html5blank' ); ?>
-        </h1>
+    <main class="pure-u-1 pure-u-md-2-3" role="main">
+        <!-- section -->
+        <section>
 
-        <?php get_template_part('loop'); ?>
+            <?php
+                if(is_archive()):
+                    the_archive_title( '<h2 class="divider">', '</h2>' );
+                elseif(is_search()):
+            ?>
+                <h2 class="divider"><?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?></h2>
+            <?php endif ?>
 
-        <?php get_template_part('pagination'); ?>
+            <?php
 
-    </section>
-    <!-- /section -->
-</main>
+            get_template_part('loop');
 
-<?php get_sidebar(); ?>
+            // Previous/next page navigation.
+            get_template_part('pagination');
+
+            // comments
+            if( comments_open() || get_comments_number()){
+                comments_template();
+            }
+            ?>
+
+        </section>
+        <!-- /section -->
+    </main>
+
+    <?php get_sidebar(); ?>
+
+</div>
+<!-- /wrapper -->
 
 <?php get_footer(); ?>

@@ -1,24 +1,88 @@
-<div class="comments">
-	<?php if (post_password_required()) : ?>
-	<p><?php _e( 'Post is password protected. Enter the password to view any comments.', 'html5blank' ); ?></p>
-</div>
+<?php
+if ( post_password_required() ) {
+	return;
+}
+?>
 
-	<?php return; endif; ?>
+<div id="comments" class="comments-area">
 
-<?php if (have_comments()) : ?>
+	<?php
+	// You can start editing here -- including this comment!
+	if ( have_comments() ) : ?>
+		<h2 class="comments-title">
+			<?php
+				 printf(esc_html('One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'uglyboy'), 
+				 number_format_i18n( get_comments_number()), 
+				 '<span>' . get_the_title() . '</span>');
+			?>
+		</h2>
 
-	<h2><?php comments_number(); ?></h2>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'uglyboy' ); ?></h2>
+			<div class="nav-links">
 
-	<ul>
-		<?php wp_list_comments('type=comment&callback=html5blankcomments'); // Custom callback in functions.php ?>
-	</ul>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'uglyboy' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'uglyboy' ) ); ?></div>
 
-<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+			</div><!-- .nav-links -->
+		</nav><!-- #comment-nav-above -->
+		
+		<?php endif; // Check for comment navigation. ?>
 
-	<p><?php _e( 'Comments are closed here.', 'html5blank' ); ?></p>
+		<ol class="comment-list">
+			<?php
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				) );
+			?>
+		</ol><!-- .comment-list -->
 
-<?php endif; ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'uglyboy' ); ?></h2>
+			<div class="nav-links">
 
-<?php comment_form(); ?>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'uglyboy' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'uglyboy' ) ); ?></div>
 
-</div>
+			</div><!-- .nav-links -->
+		</nav><!-- #comment-nav-below -->
+		<?php
+		endif; // Check for comment navigation.
+
+	endif; // Check for have_comments().
+
+
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'uglyboy' ); ?></p>
+	<?php
+	endif;
+
+	// custem comment form
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+	
+	$fields   =  array(
+		'author'  => '<div class="pure-u-1 pure-u-md-1-3">'.
+					 '<input id="author" name="author" type="text" placeholder="'. __( 'Name' ) . ( $req ? '*' : '' ) .'" value="' . esc_attr( $commenter['comment_author'] ) . '" class="pure-input-1"' . $html_req . ' /></div>',
+		'email'   => '<div class="pure-u-1 pure-u-md-2-3">'.
+					 '<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="'. __( 'Email' ) . ( $req ? '*' : '' ) .'" value="' . esc_attr( $commenter['comment_author_email'] ) . '" class="pure-input-1"' . $html_req . ' /></div>',
+	);
+
+	$comments_args = array(
+		'fields' =>  $fields,
+		'class_form'        => 'pure-form pure-form-stacked pure-g',
+		'class_submit'      => 'pure-button pure-button-primary',
+		'comment_notes_before' => '',
+		'comment_field'        => '<div class="pure-u-1"><textarea id="comment" name="comment" required="required" class="pure-input-1" placeholder="'. _x( 'Comment', 'noun' ) .'"></textarea></div>',
+	);
+
+	comment_form($comments_args);
+	?>
+
+</div><!-- #comments -->

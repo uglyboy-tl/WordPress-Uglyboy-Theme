@@ -1,3 +1,14 @@
+/* Color */
+a, .typo a{
+    color: coral;
+    border-bottom-color: coral;
+}
+
+.typo blockquote{
+    border-left-color: coral;
+}
+
+/* Base */
 header,
 footer {
     text-align: center;
@@ -7,6 +18,43 @@ nav,
 main {
     background: #fff;
 }
+
+footer{
+    margin-top: 2em; 
+    padding: 2em;
+    z-index: 3;
+    color: #fff;
+    background: #1A1A1A;
+}
+
+header.pure-u-1 {
+    margin-bottom: 1em;
+    display:grid;
+    left:0;
+}
+
+main {
+    position: relative;
+}
+
+body>* {
+    min-width: 22em;
+}
+
+@media only screen and (min-width: 48em) {
+    body>div.pure-g {
+        max-width: 48em;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    body>div.pure-g {
+        max-width: 64em;
+        width:100%;
+    }
+}
+
+/* Menu */
 
 nav>div.pure-menu {
     width: 100%;
@@ -24,7 +72,8 @@ nav>div.pure-menu {
             box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
 
-main >div{
+/* Article */
+main,aside{
     padding-left: 2%;
     padding-right: 2%
 }
@@ -45,40 +94,53 @@ article {
             box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
-
-header {
-    margin-bottom: 1.5em;
+article div.header{
+    padding: 1em 0;
 }
 
-section div.typo{
-    padding:0 0.5em;
+article div.header span{
+    color: #777;
+    font-size: 0.85em;
 }
 
-@media (min-width: 64em) {
-    body>div.pure-g {
-        width: 64em;
-        margin: 0 auto;
+article div.header span.comments{
+    float: right;
+}
+
+article div.typo{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+span.nav-previous{
+    float: right;
+}
+
+/* Search-form */
+#search-form {
+    display: none;
+}
+
+@media only screen and (min-width: 48em) {
+    #search-form {
+        display: block;
     }
 }
 
-main,aside{
-    padding:0 1em;
+/* Calendar */
+
+.pure-table th, .pure-table td{
+    padding: 0.5em 0.7em ;
 }
 
-@media (max-width: 48em) {
-    main,aside{
-        padding: 0 0.5em;
-    }  
+@media only screen and (min-width: 48em) {
+    .pure-table th, .pure-table td{
+        padding: 0.1em 0.25em ;
+    }
 }
 
-section {
-    margin-top: 0.5em;
-}
-
-footer{
-    margin-top: 2em; 
-    padding: 2em;
-    z-index: 3;
-    color: #fff;
-    background: #1A1A1A;
+@media only screen and (min-width: 64em) {
+    .pure-table th, .pure-table td{
+        padding: 0.2em 0.6em ;
+    }
 }
