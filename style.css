@@ -18,7 +18,7 @@
     display: none;
 }
 
-@media (max-width: 48em) {
+@media only screen and (max-width: 48em) {
 
     /* 默认隐藏菜单 */
     nav>div.pure-menu ul.pure-menu-list,
@@ -162,4 +162,9 @@ article div.typo img{
 
 body>div.pure-g{
     margin: 0 auto;
+}
+
+#calendar_wrap table{
+    width: 100%;
+    margin: 0.5em auto;
 }

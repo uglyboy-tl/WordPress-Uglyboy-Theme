@@ -40,12 +40,10 @@
             <!-- nav -->
             <nav class="pure-u-1" role="navigation">
                 <?php wp_nav_menu( array(
-                'theme_location'  => 'header-menu',
+                'theme_location'  => 'top-menu',
                 'container' => 'div',
                 'container_class' => 'pure-menu pure-menu-horizontal',
-                'container_id' => '',
                 'menu_class' => 'pure-menu-list',
-                'menu_id' => '',
                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'depth'           => 2, // currently there is a bug that prevents a depth > 2 from displaying correctly
                 'walker' => new Uglyboy_Walker()
