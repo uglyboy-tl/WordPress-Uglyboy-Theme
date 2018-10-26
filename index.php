@@ -1,34 +1,40 @@
 <?php get_header(); ?>
 
-<main class="pure-u-1 pure-u-md-2-3" role="main">
-    <!-- section -->
-    <section>
+<!-- wrapper -->
+<div class="pure-g">
 
-        <?php
-            if(is_archive()):
-                the_archive_title( '<h2 class="divider">', '</h2>' );
-            elseif(is_search()):
-        ?>
-            <h2 class="divider"><?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?></h2>
-        <?php endif ?>
+    <main class="pure-u-1 pure-u-md-2-3" role="main">
+        <!-- section -->
+        <section>
 
-        <?php
+            <?php
+                if(is_archive()):
+                    the_archive_title( '<h2 class="divider">', '</h2>' );
+                elseif(is_search()):
+            ?>
+                <h2 class="divider"><?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?></h2>
+            <?php endif ?>
 
-        get_template_part('loop');
+            <?php
 
-        // Previous/next page navigation.
-        get_template_part('pagination');
+            get_template_part('loop');
 
-        // comments
-        if( comments_open() || get_comments_number()){
-            comments_template();
-        }
-        ?>
+            // Previous/next page navigation.
+            get_template_part('pagination');
 
-    </section>
-    <!-- /section -->
-</main>
+            // comments
+            if( comments_open() || get_comments_number()){
+                comments_template();
+            }
+            ?>
 
-<?php get_sidebar(); ?>
+        </section>
+        <!-- /section -->
+    </main>
+
+    <?php get_sidebar(); ?>
+
+</div>
+<!-- /wrapper -->
 
 <?php get_footer(); ?>

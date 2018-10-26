@@ -1,3 +1,4 @@
+/* Color */
 a, .typo a{
     color: coral;
     border-bottom-color: coral;
@@ -7,6 +8,7 @@ a, .typo a{
     border-left-color: coral;
 }
 
+/* Base */
 header,
 footer {
     text-align: center;
@@ -17,9 +19,43 @@ main {
     background: #fff;
 }
 
-header {
-    margin-bottom: 1em;
+footer{
+    margin-top: 2em; 
+    padding: 2em;
+    z-index: 3;
+    color: #fff;
+    background: #1A1A1A;
 }
+
+header.pure-u-1 {
+    margin-bottom: 1em;
+    display:grid;
+    left:0;
+}
+
+main {
+    position: relative;
+}
+
+body>* {
+    min-width: 22em;
+}
+
+@media only screen and (min-width: 48em) {
+    body>div.pure-g {
+        max-width: 48em;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    body>div.pure-g {
+        max-width: 64em;
+        width:100%;
+    }
+}
+
+/* Menu */
+
 nav>div.pure-menu {
     width: 100%;
     background: #fff;
@@ -36,6 +72,7 @@ nav>div.pure-menu {
             box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
 
+/* Article */
 main,aside{
     padding-left: 2%;
     padding-right: 2%
@@ -78,14 +115,8 @@ article div.typo{
 span.nav-previous{
     float: right;
 }
-footer{
-    margin-top: 2em; 
-    padding: 2em;
-    z-index: 3;
-    color: #fff;
-    background: #1A1A1A;
-}
 
+/* Search-form */
 #search-form {
     display: none;
 }
@@ -96,13 +127,15 @@ footer{
     }
 }
 
+/* Calendar */
+
 .pure-table th, .pure-table td{
-    padding: 0.5em 0.8em ;
+    padding: 0.5em 0.7em ;
 }
 
 @media only screen and (min-width: 48em) {
     .pure-table th, .pure-table td{
-        padding: 0.1em 0.3em ;
+        padding: 0.1em 0.25em ;
     }
 }
 

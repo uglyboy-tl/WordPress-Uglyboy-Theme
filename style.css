@@ -18,7 +18,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 47.99em) {
 
     /* 默认隐藏菜单 */
     nav>div.pure-menu ul.pure-menu-list,
