@@ -154,18 +154,18 @@ nav>div.pure-menu {
     position: absolute;
 }
 
-article div.typo img{
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;	
+article div.typo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-body>div.pure-g{
+body>div.pure-g {
     margin: 0 auto;
 }
 
-#calendar_wrap table{
+#calendar_wrap table {
     width: 100%;
     margin: 0.5em auto;
 }

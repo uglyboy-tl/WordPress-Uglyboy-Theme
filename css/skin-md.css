@@ -1,10 +1,11 @@
 /* Color */
-a, .typo a{
+a,
+.typo a {
     color: coral;
     border-bottom-color: coral;
 }
 
-.typo blockquote{
+.typo blockquote {
     border-left-color: coral;
 }
 
@@ -19,8 +20,8 @@ main {
     background: #fff;
 }
 
-footer{
-    margin-top: 2em; 
+footer {
+    margin-top: 2em;
     padding: 2em;
     z-index: 3;
     color: #fff;
@@ -29,8 +30,8 @@ footer{
 
 header.pure-u-1 {
     margin-bottom: 1em;
-    display:grid;
-    left:0;
+    display: grid;
+    left: 0;
 }
 
 main {
@@ -50,7 +51,7 @@ body>* {
 @media only screen and (min-width: 64em) {
     body>div.pure-g {
         max-width: 64em;
-        width:100%;
+        width: 100%;
     }
 }
 
@@ -61,7 +62,7 @@ nav>div.pure-menu {
     background: #fff;
     z-index: 4;
     -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
-            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
 }
 
 .pure-menu-children {
@@ -69,11 +70,12 @@ nav>div.pure-menu {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
-            box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
 
 /* Article */
-main,aside{
+main,
+aside {
     padding-left: 2%;
     padding-right: 2%
 }
@@ -82,37 +84,37 @@ aside>div>div,
 article {
     margin-top: 1em;
     padding: 0 1em;
-    
+
     position: relative;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     overflow: hidden;
     color: #000;
     background-color: #fff;
     border-radius: 2px;
     -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
-article div.header{
+article div.header {
     padding: 1em 0;
 }
 
-article div.header span{
+article div.header span {
     color: #777;
     font-size: 0.85em;
 }
 
-article div.header span.comments{
+article div.header span.comments {
     float: right;
 }
 
-article div.typo{
+article div.typo {
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
 
-span.nav-previous{
+span.nav-previous {
     float: right;
 }
 
@@ -129,18 +131,23 @@ span.nav-previous{
 
 /* Calendar */
 
-.pure-table th, .pure-table td{
-    padding: 0.5em 0.7em ;
+.pure-table th,
+.pure-table td {
+    padding: 0.5em 0.7em;
 }
 
 @media only screen and (min-width: 48em) {
-    .pure-table th, .pure-table td{
-        padding: 0.1em 0.25em ;
+
+    .pure-table th,
+    .pure-table td {
+        padding: 0.1em 0.25em;
     }
 }
 
 @media only screen and (min-width: 64em) {
-    .pure-table th, .pure-table td{
-        padding: 0.2em 0.6em ;
+
+    .pure-table th,
+    .pure-table td {
+        padding: 0.2em 0.6em;
     }
 }
