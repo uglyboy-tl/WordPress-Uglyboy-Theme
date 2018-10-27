@@ -45,6 +45,14 @@ msgid "Leave your thoughts"
 msgstr "留下您的想法"
 
 #: ../author.php:42 ../loop.php:23 ../single.php:28
+msgid "1 Comment"
+msgstr "1 条评论"
+
+#: ../author.php:42 ../loop.php:23 ../single.php:28
+msgid "% Comments"
+msgstr "% 条评论"
+
+#: ../author.php:42 ../loop.php:23 ../single.php:28
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgstr "&ldquo;%2$s&rdquo; 有 1 条评论"
 

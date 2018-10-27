@@ -48,6 +48,14 @@ msgid "One thought on &ldquo;%2$s&rdquo;"
 msgstr ""
 
 #: ../author.php:42 ../loop.php:23 ../single.php:28
+msgid "1 Comment"
+msgstr ""
+
+#: ../author.php:42 ../loop.php:23 ../single.php:28
+msgid "% Comments"
+msgstr ""
+
+#: ../author.php:42 ../loop.php:23 ../single.php:28
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr ""
 
