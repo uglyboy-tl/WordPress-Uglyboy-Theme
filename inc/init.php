@@ -17,13 +17,13 @@ function uglyboy_header_scripts()
 function uglyboy_styles()
 {
     wp_enqueue_style("pure","https://cdn.bootcss.com/pure/1.0.0/pure-min.css",array(),'1.0.0');
-    wp_enqueue_style("grids-responsive-min","https://cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css",array(),'1.0.0');
+    wp_enqueue_style("grids-responsive-min","https://cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css",array("pure"),'1.0.0');
     wp_enqueue_style('typo', 'https://apps.bdimg.com/libs/typo.css/2.0/typo.css', array(), '2.0', 'all');
     
-    wp_register_style('uglyboy', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('uglyboy', get_template_directory_uri() . '/style.css', array("grids-responsive-min","typo"), '1.0', 'all');
     wp_enqueue_style('uglyboy'); // Enqueue it!
     
-    wp_register_style('skin', get_template_directory_uri() . '/css/skin-md.css', array(), '1.0', 'all');
+    wp_register_style('skin', get_template_directory_uri() . '/css/skin-md.css', array("uglyboy"), '1.0', 'all');
     wp_enqueue_style('skin'); // Enqueue it!  
     
     wp_enqueue_style("lightbox-css",get_template_directory_uri() . "/css/lightbox.css",array(),'0.1.0');

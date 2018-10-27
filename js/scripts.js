@@ -47,8 +47,8 @@ $(document).ready(function(){
 	});
 
 	// 设置 Logo 区固定
-	var logo_height = $("nav").offset().top
-	var nav_height = $("body>div.pure-g").offset().top - logo_height;
+	var logo_height = $("nav").offset().top;
+	var nav_height = $("nav").get(0).offsetHeight;
 
 	$('nav').prepend('<div id="nav-space"><b>1</b></div>');	
 	$('#nav-space').css({"visibility":"hidden","height":"0px"});

@@ -1,14 +1,14 @@
 <!-- pagination -->
 <div class="pagination">
-	<?php if(is_singular()):?>
-	<div class="two bottom attached buttons">
-		<?php 
+    <?php if(is_singular()):?>
+    <div class="pure-u-1">
+        <?php 
 			next_post_link('<span class="nav-next" ><i class="left arrow icon"></i>%link</span>');	
 			previous_post_link('<span class="nav-previous" >%link<i class="right arrow icon"></i></span>');	
 		?>
-	</div>
-	<?php else:?>
-	<?php
+    </div>
+    <?php else:?>
+    <?php
 	    global $wp_query;
 		$big = 999999999;
 		echo paginate_links(array(
@@ -18,6 +18,6 @@
 			'total' => $wp_query->max_num_pages
 		));
 	 ?>
-	 <?php endif; ?>
+    <?php endif; ?>
 </div>
 <!-- /pagination -->

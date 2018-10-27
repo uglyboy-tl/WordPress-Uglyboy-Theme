@@ -20,10 +20,10 @@ if (!function_exists('remove_wp_open_sans')) :
         wp_deregister_style( 'open-sans' );
         wp_register_style( 'open-sans', false );
     }
-     // 前台删除Google字体CSS
+    // 前台删除Google字体CSS
     add_action('wp_enqueue_scripts', 'remove_wp_open_sans');
     // 后台删除Google字体CSS
-     add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
+    add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
 endif;
 
 // 禁用emoji
@@ -97,4 +97,41 @@ function disable_embeds_flush_rewrite_rules() {
 }
  
 register_deactivation_hook( __FILE__, 'disable_embeds_flush_rewrite_rules' );
+
+// Remove invalid rel attribute values in the categorylist
+function remove_category_rel_from_category_list($thelist)
+{
+    return str_replace('rel="category tag"', 'rel="tag"', $thelist);
+}
+
+// Remove 'text/css' from our enqueued stylesheet
+function html5_style_remove($tag)
+{
+    return preg_replace('~\s+type=["\'][^"\']++["\']~', '', $tag);
+}
+
+// Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
+function remove_thumbnail_dimensions( $html )
+{
+    $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
+    return $html;
+}
+
+// Custom Gravatar in Settings > Discussion
+function uglyboygravatar ($avatar_defaults)
+{
+    $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
+    $avatar_defaults[$myavatar] = "Custom Gravatar";
+    return $avatar_defaults;
+}
+
+
+add_filter('avatar_defaults', 'uglyboygravatar'); // Custom Gravatar in Settings > Discussion
+add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
+add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
+add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
+add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
+add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
+add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+
 ?>

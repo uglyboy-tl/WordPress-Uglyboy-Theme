@@ -12,7 +12,9 @@
                     the_archive_title( '<h2 class="divider">', '</h2>' );
                 elseif(is_search()):
             ?>
-                <h2 class="divider"><?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?></h2>
+            <h2 class="divider">
+                <?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?>
+            </h2>
             <?php endif ?>
 
             <?php

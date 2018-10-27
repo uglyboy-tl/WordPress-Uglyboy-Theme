@@ -56,7 +56,6 @@ body>div.pure-g {
 }
 
 /* Menu */
-
 nav>div.pure-menu {
     width: 100%;
     background: #fff;
@@ -107,6 +106,19 @@ span.nav-previous {
     float: right;
 }
 
+/* Comments */
+#comments .comments-title{
+    white-space:nowrap;
+}
+
+#comments ol>li {
+    padding-left:2em; 
+}
+
+#comments ol>li ol>li{
+    padding-left:4em; 
+}
+
 /* Search-form */
 #search-form {
     display: none;
@@ -119,6 +131,13 @@ span.nav-previous {
 }
 
 /* Calendar */
+.calendar_wrap td#prev a{
+    float: left;
+}
+
+.calendar_wrap td#next a{
+    float: right;
+}
 #calendar_wrap table {
     width: 100%;
     margin: 0.5em auto;
