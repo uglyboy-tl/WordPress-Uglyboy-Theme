@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: PACKAGE VERSION\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2018-10-28 12:07+0800\n"
+        "POT-Creation-Date: 2018-10-28 16:25+0800\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,53 +15,58 @@ msgstr  "Project-Id-Version: PACKAGE VERSION\n"
         "MIME-Version: 1.0\n"
         "Content-Type: text/plain; charset=CHARSET\n"
         "Content-Transfer-Encoding: 8bit\n"
-        "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../loop.php:32
+#: ../loop.php:36
 msgid   "% Comments"
 msgstr  ""
 
-#: ../comments.php:24
+#: ../comments.php:23
 #, php-format
-msgid   "%1$s Reply to &ldquo;%2$s&rdquo;"
-msgid_plural    "%1$s Replies to &ldquo;%2$s&rdquo;"
-msgstr[0]       ""
-msgstr[1]       ""
+msgid   "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr  ""
 
 #: ../index.php:16
 #, php-format
 msgid   "%s Search Results for "
 msgstr  ""
 
-#: ../loop.php:32
+#: ../loop.php:36
 msgid   "1 Comment"
 msgstr  ""
 
-#: ../comments.php:63
+#: ../comments.php:81
+msgid   "Comment"
+msgstr  ""
+
+#: ../comments.php:58
 msgid   "Comments are closed here."
 msgstr  ""
 
-#: ../footer.php:5
+#: ../footer.php:10
 msgid   "Copyright"
 msgstr  ""
 
-#: ../functions.php:29 ../functions.php:40
+#: ../functions.php:43 ../functions.php:54
 msgid   "Description for this widget-area..."
 msgstr  ""
 
-#: ../comments.php:78
+#: ../comments.php:73
 msgid   "Email"
 msgstr  ""
 
-#: ../loop.php:32
+#: ../functions.php:20
+msgid   "Header Menu"
+msgstr  ""
+
+#: ../loop.php:36
 msgid   "Leave your thoughts"
 msgstr  ""
 
-#: ../comments.php:76
+#: ../comments.php:71
 msgid   "Name"
 msgstr  ""
 
-#: ../comments.php:53
+#: ../comments.php:48
 msgid   "Next"
 msgstr  ""
 
@@ -71,26 +76,22 @@ msgid   "One Reply to &ldquo;%s&rdquo;"
 msgstr  ""
 
 #: ../inc/icon-functions.php:11
-msgid   "Please define an SVG icon filename."
+msgid   "Please define an icon name."
 msgstr  ""
 
 #: ../inc/icon-functions.php:6
 msgid   "Please define default parameters in the form of an array."
 msgstr  ""
 
-#: ../comments.php:52
+#: ../comments.php:47
 msgid   "Previous"
 msgstr  ""
 
-#: ../loop.php:29
-msgid   "Published by"
-msgstr  ""
-
-#: ../comments.php:43
+#: ../comments.php:38
 msgid   "Reply"
 msgstr  ""
 
-#: ../loop.php:51
+#: ../loop.php:58
 msgid   "Sorry, nothing to display."
 msgstr  ""
 
@@ -98,10 +99,10 @@ msgstr  ""
 msgid   "To search, type and hit enter."
 msgstr  ""
 
-#: ../functions.php:28
+#: ../functions.php:42
 msgid   "Widget Area 1"
 msgstr  ""
 
-#: ../functions.php:39
+#: ../functions.php:53
 msgid   "Widget Area 2"
 msgstr  ""

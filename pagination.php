@@ -3,8 +3,8 @@
     <?php if(is_singular()):?>
     <div class="pure-u-1">
         <?php 
-			next_post_link('<span class="nav-next" ><i class="left arrow icon"></i>%link</span>');	
-			previous_post_link('<span class="nav-previous" >%link<i class="right arrow icon"></i></span>');	
+			next_post_link('<span class="nav-next" >'.uglyboy_get_icon(array( 'icon' => 'arrow-left' )).'%link</span>');	
+			previous_post_link('<span class="nav-previous" >%link'.uglyboy_get_icon(array( 'icon' => 'arrow-right' )).'</span>');	
 		?>
     </div>
     <?php else:?>

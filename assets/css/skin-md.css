@@ -55,6 +55,12 @@ body>div.pure-g {
     }
 }
 
+@media only screen and (min-width: 80em) {
+    body>div.pure-g {
+        max-width: 80em;
+        width: 100%;
+    }
+}
 /* Menu */
 nav>div.pure-menu {
     width: 100%;

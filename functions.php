@@ -4,8 +4,7 @@
  *  URL: uglyboy.cn | @uglyboy
  *  Custom functions, support, custom post types and more.
  */
-if (function_exists('add_theme_support'))
-{
+function twentyseventeen_setup() {
     // Add Menu Support
     add_theme_support('menus');
 
@@ -16,19 +15,28 @@ if (function_exists('add_theme_support'))
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     
-    // Localisation Support
-    load_theme_textdomain('uglyboy', get_template_directory() . '/languages');
+    if(function_exists('register_nav_menus')){    
+        register_nav_menus(array(  
+            'header-menu' => __( 'Header Menu', 'uglyboy' ),    
+        ));  
+    }
+    
+    // Add theme support for Custom Logo.
+	add_theme_support(
+		'custom-logo', array(
+			'width'      => 250,
+			'height'     => 250,
+			'flex-width' => true,
+		)
+    );
 }
+add_action( 'after_setup_theme', 'uglyboy_setup' );
 
-if(function_exists('register_nav_menus')){    
-    register_nav_menus(array(  
-        'header-menu' => __( 'Header Menu', 'uglyboy' ),    
-    ));  
-}
+// Localisation Support
+load_theme_textdomain('uglyboy', get_template_directory() . '/languages');
 
 // If Dynamic Sidebar Exists
-if (function_exists('register_sidebar'))
-{
+function uglyboy_widgets_init() {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
         'name' => __('Widget Area 1', 'uglyboy'),
@@ -51,6 +59,7 @@ if (function_exists('register_sidebar'))
         'after_title' => '</h3>'
     ));
 }
+add_action( 'widgets_init', 'uglyboy_widgets_init' );
 
 // 注册 css/js 文件
 require get_template_directory() . '/inc/init.php';
@@ -58,12 +67,16 @@ require get_template_directory() . '/inc/init.php';
 // 清理 WordPress 功能
 require get_template_directory() . '/inc/clean.php';
 
+// 图标
+require get_template_directory() . '/inc/icon-functions.php';
+
 // 菜单组件
 require get_template_directory() . '/inc/menu.php';
 
 // 日历组件
 require get_template_directory() . '/inc/calendar.php';
 
-// 图标
-require get_template_directory() . '/inc/icon-functions.php';
+// 标签云组件
+require get_template_directory() . '/inc/tag_cloud.php';
+
 ?>

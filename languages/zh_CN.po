@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uglyboy WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-28 12:07+0800\n"
+"POT-Creation-Date: 2018-10-28 16:25+0800\n"
 "PO-Revision-Date: 2018-10-28 10:05+0800\n"
 "Last-Translator:  <uglyboy@aliyun.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -16,80 +16,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../loop.php:32
+#: ../loop.php:36
 msgid "% Comments"
 msgstr "% 条评论"
 
-#: ../comments.php:24
-#, fuzzy, php-format
-msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
-msgstr[0] "&ldquo;%2$s&rdquo;有 %1$s 条评论"
-msgstr[1] "&ldquo;%2$s&rdquo;有 %1$s 条评论"
+#: ../comments.php:23
+#, php-format
+msgid "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr "&ldquo;%2$s&rdquo;有 %1$s 条评论"
 
 #: ../index.php:16
 #, php-format
 msgid "%s Search Results for "
 msgstr "%s 条搜索结果，关键词："
 
-#: ../loop.php:32
+#: ../loop.php:36
 msgid "1 Comment"
 msgstr "1 条评论"
 
-#: ../comments.php:63
+#: ../comments.php:81
+msgid "Comment"
+msgstr "评论"
+
+#: ../comments.php:58
 msgid "Comments are closed here."
 msgstr "评论已关闭"
 
-#: ../footer.php:5
+#: ../footer.php:10
 msgid "Copyright"
 msgstr "版权"
 
-#: ../functions.php:29 ../functions.php:40
+#: ../functions.php:43 ../functions.php:54
 msgid "Description for this widget-area..."
 msgstr "该组件区域的描述..."
 
-#: ../comments.php:78
+#: ../comments.php:73
 msgid "Email"
 msgstr "电子邮件"
 
-#: ../loop.php:32
+#: ../functions.php:20
+msgid "Header Menu"
+msgstr "顶部菜单"
+
+#: ../loop.php:36
 msgid "Leave your thoughts"
 msgstr "发表评论"
 
-#: ../comments.php:76
+#: ../comments.php:71
 msgid "Name"
 msgstr "姓名"
 
-#: ../comments.php:53
+#: ../comments.php:48
 msgid "Next"
 msgstr "下一页"
 
 #: ../comments.php:19
-#, fuzzy, php-format
+#, php-format
 msgid "One Reply to &ldquo;%s&rdquo;"
 msgstr "&ldquo;%s&rdquo;有 1 条评论"
 
 #: ../inc/icon-functions.php:11
-msgid "Please define an SVG icon filename."
-msgstr "请定义一个 SVG 图标的文件名"
+msgid "Please define an icon name."
+msgstr "请定义图标的文件名"
 
 #: ../inc/icon-functions.php:6
 msgid "Please define default parameters in the form of an array."
-msgstr "请定义表单的默认选项"
+msgstr "请定义默认选项"
 
-#: ../comments.php:52
+#: ../comments.php:47
 msgid "Previous"
 msgstr "上一页"
 
-#: ../loop.php:29
-msgid "Published by"
-msgstr "发布者："
-
-#: ../comments.php:43
+#: ../comments.php:38
 msgid "Reply"
 msgstr "回复"
 
-#: ../loop.php:51
+#: ../loop.php:58
 msgid "Sorry, nothing to display."
 msgstr "对不起，没有要显示的内容"
 
@@ -97,10 +99,10 @@ msgstr "对不起，没有要显示的内容"
 msgid "To search, type and hit enter."
 msgstr "请键入搜索内容并按回车"
 
-#: ../functions.php:28
+#: ../functions.php:42
 msgid "Widget Area 1"
 msgstr "组件区域 1"
 
-#: ../functions.php:39
+#: ../functions.php:53
 msgid "Widget Area 2"
 msgstr "组件区域 2"
