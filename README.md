@@ -1,7 +1,7 @@
-#Uglyboy-Blog
-### 我的 WordPress 主题
+#Uglyboy-Wordpress-Theme
+### 一个快速、响应式的 WordPress 主题
 
-其中用到了
+这是一个非常精简的 Wordpress 主题。其中用到了
 1. pure.css
   > 雅虎出品的一个网页结构框架 css，非常的小，加载速度快
 2. zepto.js

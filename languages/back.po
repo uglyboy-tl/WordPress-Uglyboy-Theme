@@ -1,14 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Uglyboy WordPress Theme\n"
-"POT-Creation-Date: 2013-09-18 00:26+0100\n"
+"POT-Creation-Date: 2018-10-23 00:08+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Jürgen Rabe | www.egado.de <rabe@egado.de>\n"
-"Language-Team: \n"
+"Last-Translator: Tian Lu <uglyboy@aliyun.com>\n"
+"Language-Team: Tian Lu <uglyboy@aliyun.com>\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-Basepath: .\n"
@@ -17,191 +18,189 @@ msgstr ""
 
 #: ../404.php:9
 msgid "Page not found"
-msgstr ""
+msgstr "未找到页面"
 
 #: ../404.php:11
 msgid "Return home?"
-msgstr ""
+msgstr "是否回到首页"
 
 #: ../archive.php:6
 msgid "Archives"
-msgstr ""
+msgstr "文章归档"
 
 #: ../author.php:8
 msgid "Author Archives for "
-msgstr ""
+msgstr "作者文章归档："
 
 #: ../author.php:14
 msgid "About "
-msgstr ""
+msgstr "关于"
 
 #: ../author.php:41 ../loop.php:22 ../single.php:27
 msgid "Published by"
-msgstr ""
+msgstr "发布者："
 
 #: ../author.php:42 ../loop.php:23 ../single.php:28
 msgid "Leave your thoughts"
-msgstr ""
-
-#: ../author.php:42 ../loop.php:23 ../single.php:28
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgstr ""
+msgstr "留下您的想法"
 
 #: ../author.php:42 ../loop.php:23 ../single.php:28
 msgid "1 Comment"
-msgstr ""
+msgstr "1 条评论"
 
 #: ../author.php:42 ../loop.php:23 ../single.php:28
 msgid "% Comments"
-msgstr ""
+msgstr "% 条评论"
+
+#: ../author.php:42 ../loop.php:23 ../single.php:28
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "&ldquo;%2$s&rdquo; 有 1 条评论"
 
 #: ../author.php:42 ../loop.php:23 ../single.php:28
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr ""
+msgstr "&ldquo;%2$s&rdquo; 有 %1$s 条评论"
 
 #: ../author.php:61 ../loop.php:39 ../page.php:31 ../single.php:53
 #: ../template-demo.php:31
 msgid "Sorry, nothing to display."
-msgstr ""
+msgstr "对不起，没有要显示的内容"
 
 #: ../category.php:6
-msgid "Categories for"
-msgstr ""
+msgid "Categories for "
+msgstr "分类："
 
 #: ../comments.php:3
 msgid "Post is password protected. Enter the password to view any comments."
 msgstr ""
+"Cet article est protégé par un mot de passe. Merci d'entrer le mot de passe "
+"pour voir les commentaires."
 
 #: ../comments.php:18
 msgid "Comments are closed here."
-msgstr ""
+msgstr "评论已关闭"
 
 #: ../footer.php:6
 msgid "Powered by"
-msgstr ""
+msgstr "技术支持："
 
 #: ../functions.php:133
 msgid "Header Menu"
-msgstr ""
+msgstr "顶部菜单"
 
 #: ../functions.php:134
 msgid "Sidebar Menu"
-msgstr ""
+msgstr "侧边栏菜单"
 
 #: ../functions.php:135
 msgid "Extra Menu"
-msgstr ""
+msgstr "附加菜单"
 
 #: ../functions.php:181
 msgid "Widget Area 1"
-msgstr ""
+msgstr "组件区域 1"
 
 #: ../functions.php:182 ../functions.php:193
 msgid "Description for this widget-area..."
-msgstr ""
+msgstr "该组件区域的描述..."
 
 #: ../functions.php:192
 msgid "Widget Area 2"
-msgstr ""
+msgstr "组建区域 2"
 
 #: ../functions.php:258
 msgid "View Article"
-msgstr ""
+msgstr "查看文章"
 
 #: ../functions.php:319
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
-msgstr ""
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">说：</span>"
 
 #: ../functions.php:322
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Votre commentaire est en attente de modération."
 
 #: ../functions.php:328
 #, php-format
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s à %2$s"
 
 #: ../functions.php:328
 msgid "(Edit)"
-msgstr ""
+msgstr "(编辑)"
 
 #: ../functions.php:411 ../functions.php:412
 msgid "HTML5 Blank Custom Post"
-msgstr ""
+msgstr "Article personnalisé"
 
 #: ../functions.php:413
 msgid "Add New"
-msgstr ""
+msgstr "Ajouter nouveau"
 
 #: ../functions.php:414
 msgid "Add New HTML5 Blank Custom Post"
-msgstr ""
+msgstr "Ajouter un article personnalisé"
 
 #: ../functions.php:415
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: ../functions.php:416
 msgid "Edit HTML5 Blank Custom Post"
-msgstr ""
+msgstr "Éditer l'article personnalisé"
 
 #: ../functions.php:417
 msgid "New HTML5 Blank Custom Post"
-msgstr ""
+msgstr "Nouvel article personnalisé"
 
 #: ../functions.php:418 ../functions.php:419
 msgid "View HTML5 Blank Custom Post"
-msgstr ""
+msgstr "Voir l'article personnalisé"
 
 #: ../functions.php:420
 msgid "Search HTML5 Blank Custom Post"
-msgstr ""
+msgstr "Rechercher un article personnalisé"
 
 #: ../functions.php:421
 msgid "No HTML5 Blank Custom Posts found"
-msgstr ""
+msgstr "Aucun article personnalisé trouvé"
 
 #: ../functions.php:422
 msgid "No HTML5 Blank Custom Posts found in Trash"
-msgstr ""
+msgstr "Aucun article personnalisé trouvé dans la corbeille"
 
 #: ../index.php:6
 msgid "Latest Posts"
-msgstr ""
+msgstr "最近文章"
 
 #: ../search.php:6
 #, php-format
 msgid "%s Search Results for "
-msgstr ""
+msgstr "%s 条搜索结果，关键词："
 
 #: ../searchform.php:3
 msgid "To search, type and hit enter."
-msgstr ""
+msgstr "请键入搜索内容并按回车"
 
 #: ../searchform.php:4
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: ../single.php:33
 msgid "Tags: "
-msgstr ""
+msgstr "标签： "
 
 #: ../single.php:35
 msgid "Categorised in: "
-msgstr ""
+msgstr "分类到："
 
 #: ../single.php:37
 msgid "This post was written by "
-msgstr ""
+msgstr "这篇文章的作者是 "
 
 #: ../tag.php:6
 msgid "Tag Archive: "
-msgstr ""
-
-#: ../searchform.php:3
-msgid "To search, type and hit enter."
-msgstr ""
+msgstr "标签："
 
 #~ msgid "%s results for "
-#~ msgstr "%s Ergebnisse für "
+#~ msgstr "%s résultats pour "

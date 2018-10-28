@@ -1,206 +1,100 @@
+# Chinese translations for PACKAGE package.
+# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#  <uglyboy@aliyun.com>, 2018.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Uglyboy WordPress Theme\n"
-"POT-Creation-Date: 2018-10-23 00:08+0100\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Tian Lu <uglyboy@aliyun.com>\n"
-"Language-Team: Tian Lu <uglyboy@aliyun.com>\n"
-"Language: zh\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-28 10:22+0800\n"
+"PO-Revision-Date: 2018-10-28 10:05+0800\n"
+"Last-Translator:  <uglyboy@aliyun.com>\n"
+"Language-Team: Chinese (simplified)\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: _e;__\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: ..\n"
 
-#: ../404.php:9
-msgid "Page not found"
-msgstr "未找到页面"
-
-#: ../404.php:11
-msgid "Return home?"
-msgstr "是否回到首页"
-
-#: ../archive.php:6
-msgid "Archives"
-msgstr "文章归档"
-
-#: ../author.php:8
-msgid "Author Archives for "
-msgstr "作者文章归档："
-
-#: ../author.php:14
-msgid "About "
-msgstr "关于"
-
-#: ../author.php:41 ../loop.php:22 ../single.php:27
-msgid "Published by"
-msgstr "发布者："
-
-#: ../author.php:42 ../loop.php:23 ../single.php:28
-msgid "Leave your thoughts"
-msgstr "留下您的想法"
-
-#: ../author.php:42 ../loop.php:23 ../single.php:28
-msgid "1 Comment"
-msgstr "1 条评论"
-
-#: ../author.php:42 ../loop.php:23 ../single.php:28
+#: ../loop.php:32
 msgid "% Comments"
 msgstr "% 条评论"
 
-#: ../author.php:42 ../loop.php:23 ../single.php:28
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgstr "&ldquo;%2$s&rdquo; 有 1 条评论"
-
-#: ../author.php:42 ../loop.php:23 ../single.php:28
+#: ../comments.php:14
+#, php-format
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr "&ldquo;%2$s&rdquo; 有 %1$s 条评论"
 
-#: ../author.php:61 ../loop.php:39 ../page.php:31 ../single.php:53
-#: ../template-demo.php:31
-msgid "Sorry, nothing to display."
-msgstr "对不起，没有要显示的内容"
-
-#: ../category.php:6
-msgid "Categories for "
-msgstr "分类："
-
-#: ../comments.php:3
-msgid "Post is password protected. Enter the password to view any comments."
-msgstr ""
-"Cet article est protégé par un mot de passe. Merci d'entrer le mot de passe "
-"pour voir les commentaires."
-
-#: ../comments.php:18
-msgid "Comments are closed here."
-msgstr "评论已关闭"
-
-#: ../footer.php:6
-msgid "Powered by"
-msgstr "技术支持："
-
-#: ../functions.php:133
-msgid "Header Menu"
-msgstr "顶部菜单"
-
-#: ../functions.php:134
-msgid "Sidebar Menu"
-msgstr "侧边栏菜单"
-
-#: ../functions.php:135
-msgid "Extra Menu"
-msgstr "附加菜单"
-
-#: ../functions.php:181
-msgid "Widget Area 1"
-msgstr "组件区域 1"
-
-#: ../functions.php:182 ../functions.php:193
-msgid "Description for this widget-area..."
-msgstr "该组件区域的描述..."
-
-#: ../functions.php:192
-msgid "Widget Area 2"
-msgstr "组建区域 2"
-
-#: ../functions.php:258
-msgid "View Article"
-msgstr "查看文章"
-
-#: ../functions.php:319
-#, php-format
-msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
-msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">说：</span>"
-
-#: ../functions.php:322
-msgid "Your comment is awaiting moderation."
-msgstr "Votre commentaire est en attente de modération."
-
-#: ../functions.php:328
-#, php-format
-msgid "%1$s at %2$s"
-msgstr "%1$s à %2$s"
-
-#: ../functions.php:328
-msgid "(Edit)"
-msgstr "(编辑)"
-
-#: ../functions.php:411 ../functions.php:412
-msgid "HTML5 Blank Custom Post"
-msgstr "Article personnalisé"
-
-#: ../functions.php:413
-msgid "Add New"
-msgstr "Ajouter nouveau"
-
-#: ../functions.php:414
-msgid "Add New HTML5 Blank Custom Post"
-msgstr "Ajouter un article personnalisé"
-
-#: ../functions.php:415
-msgid "Edit"
-msgstr "编辑"
-
-#: ../functions.php:416
-msgid "Edit HTML5 Blank Custom Post"
-msgstr "Éditer l'article personnalisé"
-
-#: ../functions.php:417
-msgid "New HTML5 Blank Custom Post"
-msgstr "Nouvel article personnalisé"
-
-#: ../functions.php:418 ../functions.php:419
-msgid "View HTML5 Blank Custom Post"
-msgstr "Voir l'article personnalisé"
-
-#: ../functions.php:420
-msgid "Search HTML5 Blank Custom Post"
-msgstr "Rechercher un article personnalisé"
-
-#: ../functions.php:421
-msgid "No HTML5 Blank Custom Posts found"
-msgstr "Aucun article personnalisé trouvé"
-
-#: ../functions.php:422
-msgid "No HTML5 Blank Custom Posts found in Trash"
-msgstr "Aucun article personnalisé trouvé dans la corbeille"
-
-#: ../index.php:6
-msgid "Latest Posts"
-msgstr "最近文章"
-
-#: ../search.php:6
+#: ../index.php:16
 #, php-format
 msgid "%s Search Results for "
 msgstr "%s 条搜索结果，关键词："
+
+#: ../loop.php:32
+msgid "1 Comment"
+msgstr "1 条评论"
+
+#: ../comments.php:23 ../comments.php:51
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: ../comments.php:74
+msgid "Comments are closed here."
+msgstr "评论已关闭"
+
+#: ../footer.php:5
+msgid "Copyright"
+msgstr "版权"
+
+#: ../functions.php:35 ../functions.php:46
+msgid "Description for this widget-area..."
+msgstr "该组件区域的描述..."
+
+#: ../comments.php:88
+msgid "Email"
+msgstr "电子邮件"
+
+#: ../functions.php:25 ../header.php:40
+msgid "Header Menu"
+msgstr "顶部菜单"
+
+#: ../loop.php:32
+msgid "Leave your thoughts"
+msgstr "评论"
+
+#: ../comments.php:86
+msgid "Name"
+msgstr "姓名"
+
+#: ../comments.php:31 ../comments.php:59
+msgid "Newer Comments"
+msgstr "更新的评论"
+
+#: ../comments.php:28 ../comments.php:56
+msgid "Older Comments"
+msgstr "更旧的评论"
+
+#: ../comments.php:14
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "&ldquo;%2$s&rdquo; 有 1 条评论"
+
+#: ../loop.php:29
+msgid "Published by"
+msgstr "发布者："
+
+#: ../loop.php:51
+msgid "Sorry, nothing to display."
+msgstr "对不起，没有要显示的内容"
 
 #: ../searchform.php:3
 msgid "To search, type and hit enter."
 msgstr "请键入搜索内容并按回车"
 
-#: ../searchform.php:4
-msgid "Search"
-msgstr "搜索"
+#: ../functions.php:34
+msgid "Widget Area 1"
+msgstr "组件区域 1"
 
-#: ../single.php:33
-msgid "Tags: "
-msgstr "标签： "
-
-#: ../single.php:35
-msgid "Categorised in: "
-msgstr "分类到："
-
-#: ../single.php:37
-msgid "This post was written by "
-msgstr "这篇文章的作者是 "
-
-#: ../tag.php:6
-msgid "Tag Archive: "
-msgstr "标签："
-
-#~ msgid "%s results for "
-#~ msgstr "%s résultats pour "
+#: ../functions.php:45
+msgid "Widget Area 2"
+msgstr "组件区域 2"
