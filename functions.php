@@ -63,4 +63,7 @@ require get_template_directory() . '/inc/menu.php';
 
 // 日历组件
 require get_template_directory() . '/inc/calendar.php';
+
+// 图标
+require get_template_directory() . '/inc/icon-functions.php';
 ?>
