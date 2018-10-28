@@ -21,7 +21,7 @@ function uglyboy_styles()
     wp_enqueue_style('typo', 'https://apps.bdimg.com/libs/typo.css/2.0/typo.css', array(), '2.0', 'all');
     wp_enqueue_style('font-awesome','https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css',array(),'4.7.0');
     
-    wp_register_style('uglyboy', get_template_directory_uri() . '/style.css', array("grids-responsive-min","typo"), '1.0', 'all');
+    wp_register_style('uglyboy', get_template_directory_uri() . '/style.css', array("grids-responsive-min"), '1.0', 'all');
     wp_enqueue_style('uglyboy'); // Enqueue it!
     
     wp_register_style('skin', get_template_directory_uri() . '/assets/css/skin-md.css', array("uglyboy"), '1.0', 'all');
