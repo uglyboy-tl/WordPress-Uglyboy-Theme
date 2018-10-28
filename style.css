@@ -22,7 +22,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 47.99em) {
+@media only screen and (max-width: 47.99rem) {
 
     /* 默认隐藏菜单 */
     nav>div.pure-menu ul.pure-menu-list,
@@ -52,13 +52,13 @@
         /* these are the 3 lines of the menu icon */
         position: absolute;
         background-color: #1A1A1A;
-        height: 0.2em;
-        width: 1em;
+        height: 0.2rem;
+        width: 1rem;
     }
 
     #menu span {
-        top: 1.4em;
-        left: 1.5em;
+        top: 1.4rem;
+        left: 1.5rem;
         -webkit-transform: translateX(-50%) translateY(-50%);
         -ms-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
@@ -77,15 +77,15 @@
     }
 
     #menu span::before {
-        -webkit-transform: translateY(-0.4em);
-        -ms-transform: translateY(-0.4em);
-        transform: translateY(-0.4em);
+        -webkit-transform: translateY(-0.4rem);
+        -ms-transform: translateY(-0.4rem);
+        transform: translateY(-0.4rem);
     }
 
     #menu span::after {
-        -webkit-transform: translateY(0.4em);
-        -ms-transform: translateY(0.4em);
-        transform: translateY(0.4em);
+        -webkit-transform: translateY(0.4rem);
+        -ms-transform: translateY(0.4rem);
+        transform: translateY(0.4rem);
     }
 
     #menu.opened span {
@@ -110,20 +110,20 @@
         right: 0;
         top: 0;
         display: block;
-        border-left: 0.1em solid rgba(120, 120, 120, 0.15);
-        height: 2.8em;
-        width: 2.8em;
+        border-left: 0.1rem solid rgba(120, 120, 120, 0.15);
+        height: 2.8rem;
+        width: 2.8rem;
         cursor: pointer;
     }
 
     span.submenu::after {
         content: '';
         position: absolute;
-        top: 0.95em;
-        left: 1.35em;
+        top: 0.95rem;
+        left: 1.35rem;
         display: block;
-        width: 0.1em;
-        height: 0.9em;
+        width: 0.1rem;
+        height: 0.9rem;
         background: #1A1A1A;
         z-index: 99;
     }
@@ -131,11 +131,11 @@
     span.submenu::before {
         content: '';
         position: absolute;
-        left: 0.95em;
-        top: 1.35em;
+        left: 0.95rem;
+        top: 1.35rem;
         display: block;
-        width: 0.9em;
-        height: 0.1em;
+        width: 0.9rem;
+        height: 0.1rem;
         background: #1A1A1A;
         z-index: 99;
     }
@@ -164,9 +164,9 @@ article div.typo img {
 .icon {
 	display: inline-block;
 	fill: currentColor;
-	height: 1em;
+	height: 1rem;
 	position: relative; /* Align more nicely with capital letters */
-	top: -0.0625em;
+	top: -0.0625rem;
 	vertical-align: middle;
-	width: 1em;
+	width: 1rem;
 }
