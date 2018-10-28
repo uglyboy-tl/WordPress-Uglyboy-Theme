@@ -1,7 +1,8 @@
-<div class="sidebar-widget pure-u-1">
-    <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
-</div>
-
+<aside class="pure-u-1">
+    <div class="sidebar-widget">
+        <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
+    </div>
+</aside>
 <!-- footer -->
 <footer class="pure-u-1" role="contentinfo">
 

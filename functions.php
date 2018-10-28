@@ -4,10 +4,27 @@
  *  URL: uglyboy.cn | @uglyboy
  *  Custom functions, support, custom post types and more.
  */
-function twentyseventeen_setup() {
+function uglyboy_setup() {
+    // Localisation Support
+    load_theme_textdomain('uglyboy', get_template_directory() . '/languages');
+
     // Add Menu Support
     add_theme_support('menus');
+    
+	register_nav_menus(
+		array(
+            'header-menu' => __( 'Header Menu', 'uglyboy' ),    
+		)
+	);
+    // Add theme support for Custom Logo.
+    add_theme_support('custom-logo'); 
+       
+    add_theme_support( 'custom-header',array(
+        'default-image' => str_replace('http','https',get_template_directory_uri()) .'/assets/images/header.jpg',
+    ));
 
+    add_theme_support( 'custom-background');
+    
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('large', 700, '', true); // Large Thumbnail
@@ -15,25 +32,8 @@ function twentyseventeen_setup() {
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     
-    if(function_exists('register_nav_menus')){    
-        register_nav_menus(array(  
-            'header-menu' => __( 'Header Menu', 'uglyboy' ),    
-        ));  
-    }
-    
-    // Add theme support for Custom Logo.
-	add_theme_support(
-		'custom-logo', array(
-			'width'      => 250,
-			'height'     => 250,
-			'flex-width' => true,
-		)
-    );
 }
 add_action( 'after_setup_theme', 'uglyboy_setup' );
-
-// Localisation Support
-load_theme_textdomain('uglyboy', get_template_directory() . '/languages');
 
 // If Dynamic Sidebar Exists
 function uglyboy_widgets_init() {
@@ -53,7 +53,7 @@ function uglyboy_widgets_init() {
         'name' => __('Widget Area 2', 'uglyboy'),
         'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'before_widget' => '<div id="%1$s" class="%2$s pure-u-1 pure-u-md-1-3">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
