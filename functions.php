@@ -20,7 +20,7 @@ function uglyboy_setup() {
     add_theme_support('custom-logo'); 
        
     add_theme_support( 'custom-header',array(
-        'default-image' => str_replace('http','https',get_template_directory_uri()) .'/assets/images/header.jpg',
+        'default-image' => str_replace('http','https',get_template_directory_uri()) .'/img/header.jpg',
     ));
 
     add_theme_support( 'custom-background');

@@ -1,20 +1,27 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
         <?php wp_title(''); ?>
         <?php if(wp_title('', false)) { echo ' :'; } ?>
         <?php bloginfo('name'); ?>
     </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
 
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
 
     <!-- header -->
     <header class="pure-u-1" role="banner">

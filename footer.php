@@ -18,6 +18,9 @@
 <!-- /footer -->
 
 <?php wp_footer(); ?>
+<script>
+    window.Zepto || document.write('<script src="js/vendor/zepto.min.js"><\/script>')
+</script>
 </body>
 
 </html>
