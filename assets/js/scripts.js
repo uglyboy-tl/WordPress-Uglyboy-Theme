@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// 加载小屏幕的菜单标识
-	$('nav > div.pure-menu').prepend('<a href="#0" id="menu" class="pure-menu-heading">M<span aria-hidden="true"></span></a>');
+	$('nav > div.pure-menu').prepend('<a id="menu" class="pure-menu-heading">M<span aria-hidden="true"></span></a>');
 	$("nav .pure-menu-allow-hover").prepend('<span class="submenu"></span>');
 
 	// 小屏幕的菜单操作响应

@@ -49,6 +49,7 @@ body>div.pure-g {
 @media only screen and (min-width: 48rem) {
     body>div.pure-g {
         max-width: 48rem;
+        width: 100%;
     }
 }
 
