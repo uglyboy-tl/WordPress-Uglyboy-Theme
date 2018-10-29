@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?> class="borderbox">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">

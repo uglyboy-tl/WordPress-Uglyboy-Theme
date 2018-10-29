@@ -14,7 +14,24 @@
     WordPress Available:  yes
     Requires License:    no
 */
+/*------------------------------------*\
+	BASE
+\*------------------------------------*/
+html {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+article img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
 /*------------------------------------*\
 	MENU
 \*------------------------------------*/
@@ -150,23 +167,4 @@ nav,
 main,
 nav>div.pure-menu {
     background: #fff;
-}
-
-article div.typo img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-/* SVG Icons base styles */
-
-.icon {
-	display: inline-block;
-	fill: currentColor;
-	height: 1rem;
-	position: relative; /* Align more nicely with capital letters */
-	top: -0.0625rem;
-	vertical-align: middle;
-	width: 1rem;
 }
