@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: PACKAGE VERSION\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2018-10-28 16:25+0800\n"
+        "POT-Creation-Date: 2018-10-29 10:08+0800\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr  "Project-Id-Version: PACKAGE VERSION\n"
         "Content-Type: text/plain; charset=CHARSET\n"
         "Content-Transfer-Encoding: 8bit\n"
 
-#: ../loop.php:36
+#: ../loop.php:20
 msgid   "% Comments"
 msgstr  ""
 
@@ -30,19 +30,19 @@ msgstr  ""
 msgid   "%s Search Results for "
 msgstr  ""
 
-#: ../loop.php:36
+#: ../loop.php:20
 msgid   "1 Comment"
 msgstr  ""
 
-#: ../comments.php:81
+#: ../comments.php:79
 msgid   "Comment"
 msgstr  ""
 
-#: ../comments.php:58
+#: ../comments.php:56
 msgid   "Comments are closed here."
 msgstr  ""
 
-#: ../footer.php:10
+#: ../footer.php:11
 msgid   "Copyright"
 msgstr  ""
 
@@ -50,23 +50,23 @@ msgstr  ""
 msgid   "Description for this widget-area..."
 msgstr  ""
 
-#: ../comments.php:73
+#: ../comments.php:71
 msgid   "Email"
 msgstr  ""
 
-#: ../functions.php:20
+#: ../functions.php:16
 msgid   "Header Menu"
 msgstr  ""
 
-#: ../loop.php:36
+#: ../loop.php:20
 msgid   "Leave your thoughts"
 msgstr  ""
 
-#: ../comments.php:71
+#: ../comments.php:69
 msgid   "Name"
 msgstr  ""
 
-#: ../comments.php:48
+#: ../comments.php:46
 msgid   "Next"
 msgstr  ""
 
@@ -83,15 +83,15 @@ msgstr  ""
 msgid   "Please define default parameters in the form of an array."
 msgstr  ""
 
-#: ../comments.php:47
+#: ../comments.php:45
 msgid   "Previous"
 msgstr  ""
 
-#: ../comments.php:38
+#: ../comments.php:36
 msgid   "Reply"
 msgstr  ""
 
-#: ../loop.php:58
+#: ../loop.php:60
 msgid   "Sorry, nothing to display."
 msgstr  ""
 

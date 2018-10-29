@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uglyboy WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-28 16:25+0800\n"
+"POT-Creation-Date: 2018-10-29 10:08+0800\n"
 "PO-Revision-Date: 2018-10-28 10:05+0800\n"
 "Last-Translator:  <uglyboy@aliyun.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../loop.php:36
+#: ../loop.php:20
 msgid "% Comments"
 msgstr "% 条评论"
 
@@ -30,19 +30,19 @@ msgstr "&ldquo;%2$s&rdquo;有 %1$s 条评论"
 msgid "%s Search Results for "
 msgstr "%s 条搜索结果，关键词："
 
-#: ../loop.php:36
+#: ../loop.php:20
 msgid "1 Comment"
 msgstr "1 条评论"
 
-#: ../comments.php:81
+#: ../comments.php:79
 msgid "Comment"
 msgstr "评论"
 
-#: ../comments.php:58
+#: ../comments.php:56
 msgid "Comments are closed here."
 msgstr "评论已关闭"
 
-#: ../footer.php:10
+#: ../footer.php:11
 msgid "Copyright"
 msgstr "版权"
 
@@ -50,23 +50,23 @@ msgstr "版权"
 msgid "Description for this widget-area..."
 msgstr "该组件区域的描述..."
 
-#: ../comments.php:73
+#: ../comments.php:71
 msgid "Email"
 msgstr "电子邮件"
 
-#: ../functions.php:20
+#: ../functions.php:16
 msgid "Header Menu"
 msgstr "顶部菜单"
 
-#: ../loop.php:36
+#: ../loop.php:20
 msgid "Leave your thoughts"
 msgstr "发表评论"
 
-#: ../comments.php:71
+#: ../comments.php:69
 msgid "Name"
 msgstr "姓名"
 
-#: ../comments.php:48
+#: ../comments.php:46
 msgid "Next"
 msgstr "下一页"
 
@@ -83,15 +83,15 @@ msgstr "请定义图标的文件名"
 msgid "Please define default parameters in the form of an array."
 msgstr "请定义默认选项"
 
-#: ../comments.php:47
+#: ../comments.php:45
 msgid "Previous"
 msgstr "上一页"
 
-#: ../comments.php:38
+#: ../comments.php:36
 msgid "Reply"
 msgstr "回复"
 
-#: ../loop.php:58
+#: ../loop.php:60
 msgid "Sorry, nothing to display."
 msgstr "对不起，没有要显示的内容"
 
