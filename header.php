@@ -20,7 +20,7 @@
     <header class="pure-u-1" role="banner">
 
         <!-- logo -->
-        <div class="pure-u-1" id='logo' style="background-image:url(<?php header_image() ?>)">
+        <div class="pure-u-1" id='logo' style="background-image:url(<?php echo esc_url(get_custom_header()->url)?>)">
             <div class="logo-text">
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                         <?php bloginfo( 'name' ); ?></a></h1>
