@@ -133,10 +133,6 @@ article div.header span {
     font-size: 0.85rem;
 }
 
-article div.header span.comments {
-    float: right;
-}
-
 span.nav-previous {
     float: right;
 }

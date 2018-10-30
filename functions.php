@@ -68,7 +68,7 @@ require get_template_directory() . '/inc/init.php';
 require get_template_directory() . '/inc/clean.php';
 
 // 图标
-require get_template_directory() . '/inc/icon-functions.php';
+require get_template_directory() . '/inc/icon_functions.php';
 
 // 菜单组件
 require get_template_directory() . '/inc/menu.php';
@@ -78,5 +78,8 @@ require get_template_directory() . '/inc/calendar.php';
 
 // 标签云组件
 require get_template_directory() . '/inc/tag_cloud.php';
+
+// 文章阅读次数
+require get_template_directory() . '/inc/post_views.php';
 
 ?>

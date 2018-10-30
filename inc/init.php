@@ -32,9 +32,7 @@ function uglyboy_styles()
 }
 
 
-add_action('init', 'uglyboy_scripts'); // Add Custom CSS to wp_head
-//remove_action('wp_head', 'wp_enqueue_scripts', 1); // Add Custom JS to wp_footer
-//add_action('wp_footer', 'wp_enqueue_scripts', 5);
+add_action('wp_footer', 'uglyboy_scripts');
 add_action('wp_enqueue_scripts', 'uglyboy_styles'); 
 
 ?>
