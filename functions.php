@@ -42,10 +42,10 @@ function uglyboy_widgets_init() {
         'name' => __('Widget Area 1', 'uglyboy'),
         'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+        'before_widget' => '<div id="%1$s" class="card %2$s">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<div class="card-header"><h3>',
+        'after_title' => '</h3></div><div class="card-body">'
     ));
 
     // Define Sidebar Widget Area 2
@@ -53,10 +53,10 @@ function uglyboy_widgets_init() {
         'name' => __('Widget Area 2', 'uglyboy'),
         'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s pure-u-1 pure-u-md-1-3">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+        'before_widget' => '<div id="%1$s" class="card pure-u-1 pure-u-md-1-3 %2$s">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<div class="card-header"><h3>',
+        'after_title' => '</h3></div><div class="card-body">'
     ));
 }
 add_action( 'widgets_init', 'uglyboy_widgets_init' );

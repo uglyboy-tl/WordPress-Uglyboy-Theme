@@ -33,6 +33,42 @@ article img {
     max-width: 100%;
 }
 /*------------------------------------*\
+	Helper classes
+\*------------------------------------*/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    width: 100%;
+}
+
+@media only screen and (min-width: 48rem) {
+    .container {
+        max-width: 48rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .container {
+        max-width: 64rem;
+    }
+}
+
+@media only screen and (min-width: 80rem) {
+    .container {
+        max-width: 80rem;
+    }
+}
+
+.clearfix::after,
+.container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/*------------------------------------*\
 	MENU
 \*------------------------------------*/
 #menu {
@@ -166,4 +202,18 @@ article img {
 nav,
 nav>div.pure-menu {
     background: #fff;
+}
+
+main,
+aside {
+    padding: 0 0.4em;
+}
+
+aside>div>div,
+article {
+    margin-top: 0.4rem;
+}
+
+span.author {
+    display: none;
 }

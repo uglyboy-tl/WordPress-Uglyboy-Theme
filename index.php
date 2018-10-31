@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- wrapper -->
-<div class="pure-g">
+<div class="container pure-g">
 
     <main class="pure-u-1 pure-u-md-2-3" role="main">
         <!-- section -->
