@@ -9,10 +9,10 @@
 
             <?php
                 if(is_archive()):
-                    the_archive_title( '<h2 class="divider">', '</h2>' );
+                    the_archive_title( '<h2 class="bg-title">', '</h2>' );
                 elseif(is_search()):
             ?>
-            <h2 class="divider">
+            <h2 class="bg-title">
                 <?php echo sprintf( __( '%s Search Results for ', 'uglyboy' ), $wp_query->found_posts ); echo get_search_query(); ?>
             </h2>
             <?php endif ?>

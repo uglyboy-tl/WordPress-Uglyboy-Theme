@@ -1,0 +1,76 @@
+html{
+    color:#64706c;
+}
+
+.bg-color {
+    background: #ede9ce;
+}
+
+.bg-title{
+    color: #c7ad88;
+}
+
+header .bg-image-title,
+header .bg-image-title a{
+    color:#ede9ce;
+    text-decoration: none;
+}
+
+footer.bg-color,
+footer.bg-color a {
+    color: #ede9ce;
+    background: #935347;
+    text-decoration: none;
+}
+
+.pure-table thead{
+    background-color: #ede9ce;
+}
+
+.card .card-header span,
+.card .card-footer span,
+.card .card-header span a,
+.card .card-footer span a{
+    opacity: .8;
+}
+
+.nav-color>div,
+.nav-color ul,
+.nav-color li {
+    background: #c7ad88;
+}
+
+.nav-color li a,
+.nav-color .pure-menu-selected .pure-menu-link{
+    color:#ede9ce;
+}
+.nav-color li a:hover,
+.nav-color .pure-menu-selected .pure-menu-link:hover,
+.nav-color li a:focus,
+.nav-color .pure-menu-selected .pure-menu-link:focus{
+    color: #935347;
+    background: #ede9ce;
+}
+
+.nav-color .pure-menu-selected .pure-menu-link{
+    font-weight: 600;
+}
+
+a,
+.typo a {
+    color: #935347;
+    border-bottom-color: #935347;
+}
+
+.typo blockquote {
+    border-left-color: #935347;
+}
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected,
+.pagination .page-item.active a {
+    background-color: #935347;
+    color: #fff
+}

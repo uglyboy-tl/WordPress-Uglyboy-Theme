@@ -69,7 +69,7 @@
 <?php else: ?>
 
 <!-- article -->
-<article>
+<article class="bg-title">
     <h2>
         <?php _e( 'Sorry, nothing to display.', 'uglyboy' ); ?>
     </h2>
