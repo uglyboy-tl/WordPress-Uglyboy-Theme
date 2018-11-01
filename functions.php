@@ -20,10 +20,11 @@ function uglyboy_setup() {
     add_theme_support('custom-logo'); 
        
     add_theme_support( 'custom-header',array(
-        'default-image' => str_replace('http','https',get_template_directory_uri()) .'/img/header.jpg',
+        'flex-width' => true,// 自适应高度
+        'flex-width' => true,// 自适应宽度
+        'default-text-color' => '#eee',
+        'default-image' => get_template_directory_uri() .'/img/header.jpg',
     ));
-
-    add_theme_support( 'custom-background');
     
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
@@ -43,9 +44,9 @@ function uglyboy_widgets_init() {
         'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="card %2$s">',
-        'after_widget' => '</div></div>',
-        'before_title' => '<div class="card-header"><h3>',
-        'after_title' => '</h3></div><div class="card-body">'
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
     ));
 
     // Define Sidebar Widget Area 2
@@ -54,9 +55,9 @@ function uglyboy_widgets_init() {
         'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="card pure-u-1 pure-u-md-1-3 %2$s">',
-        'after_widget' => '</div></div>',
-        'before_title' => '<div class="card-header"><h3>',
-        'after_title' => '</h3></div><div class="card-body">'
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
     ));
 }
 add_action( 'widgets_init', 'uglyboy_widgets_init' );
@@ -72,6 +73,9 @@ require get_template_directory() . '/inc/icon_functions.php';
 
 // 菜单组件
 require get_template_directory() . '/inc/menu.php';
+
+// 页面导航组件
+require get_template_directory() . '/inc/paginate_links.php';
 
 // 日历组件
 require get_template_directory() . '/inc/calendar.php';

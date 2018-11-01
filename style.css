@@ -23,10 +23,14 @@ html {
     -webkit-box-sizing: border-box;
 }
 
+body, button, input, select, textarea {
+    line-height: 1.8;
+}
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
+  
 article img {
     width: auto;
     height: auto;
@@ -68,11 +72,19 @@ article img {
   display: table;
 }
 
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
 /*------------------------------------*\
 	MENU
 \*------------------------------------*/
 #menu {
     display: none;
+}
+
+nav>div.pure-menu {
+    width: 100%;
 }
 
 @media only screen and (max-width: 47.99rem) {
@@ -198,22 +210,55 @@ article img {
     }
 }
 
+/*------------------------------------*\
+	CALENDAR
+\*------------------------------------*/
+.calendar_wrap td#prev a {
+    float: left;
+}
+
+.calendar_wrap td#next a {
+    float: right;
+}
+
+#calendar_wrap table {
+    width: 100%;
+    margin: 0.5rem auto;
+}
+
+.pure-table th,
+.pure-table td {
+    padding: 0.5rem 0.5rem;
+}
+
+@media only screen and (min-width: 48rem) {
+
+    .pure-table th,
+    .pure-table td {
+        padding: 0.25rem 0.25rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+
+    .pure-table th,
+    .pure-table td {
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 80rem) {
+
+    .pure-table th,
+    .pure-table td {
+        padding: 0.25rem 0.75rem;
+    }
+}
+
 /* Temp */
-nav,
-nav>div.pure-menu {
-    background: #fff;
+
+/* Comments */
+#comments .comments-title {
+    white-space: nowrap;
 }
 
-main,
-aside {
-    padding: 0 0.4em;
-}
-
-aside>div>div,
-article {
-    margin-top: 0.4rem;
-}
-
-span.author {
-    display: none;
-}

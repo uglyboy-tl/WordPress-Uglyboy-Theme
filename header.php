@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="apple-touch-icon" href="/icon.png">
 
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="bg-color">
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -27,19 +27,19 @@
     <header class="pure-u-1" role="banner">
 
         <!-- logo -->
-        <div class="pure-u-1" id='logo' style="background-image:url(<?php echo esc_url(get_custom_header()->url)?>)">
-            <div class="logo-text">
+        <div class="pure-u-1 bg-image" id='logo' style="background-image:url(<?php header_image()?>);color:<?php header_textcolor();?>">
+            <div class="bg-image-title">
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                         <?php bloginfo( 'name' ); ?></a></h1>
-                <h3 class="site-description">
+                <p class="site-description">
                     <?php bloginfo( 'description' ); ?>
-                </h3>
+                </p>
             </div>
         </div>
         <!-- /logo -->
 
         <!-- nav -->
-        <nav class="pure-u-1" role="navigation">
+        <nav class="pure-u-1 nav-color nav-shadow center" role="navigation">
             <?php wp_nav_menu(array(
                 'theme_location'  => 'header-menu',
                 'container' => 'div',

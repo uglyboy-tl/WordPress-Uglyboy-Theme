@@ -15,8 +15,7 @@
     <div class="card-header">
         <span class="date">
             <?php echo uglyboy_get_icon( array('icon' => 'calendar' ))?>
-            <?php the_time('Y F j'); ?>
-            <?php the_time('a g:i'); ?>
+            <?php the_time('Y 年 m 月 d 日 G:i'); ?>
         </span>
         <span class="category">
             <?php echo uglyboy_get_icon( array('icon' => 'archive' ))?>
@@ -30,10 +29,27 @@
         </h2>
         <!-- /post title -->
 
+    </div>
+    <!-- .header -->
+
+    <div class="card-body typo typo-selection">
+    <?php if (is_singular()):
+        the_content();
+    else:
+        the_excerpt();
+    endif ?>
+    </div>
+    <div class="card-footer">
         <!-- post details -->
+        <span class="author">
+            <?php echo uglyboy_get_icon( array('icon' => 'user' ))?>
+            <?php the_author_posts_link(); ?>
+        </span>
         <span class="views">
             <?php echo uglyboy_get_icon( array('icon' => 'eye' ))?>
-            <?php echo get_post_views(); ?>
+            <a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>">
+                <?php echo get_post_views(); ?>
+            </a>
         </span>
         <span class="comments">
             <?php
@@ -43,20 +59,7 @@
                 }
             ?>
         </span>
-        <span class="author">
-            <?php echo uglyboy_get_icon( array('icon' => 'user' ))?>
-            <?php the_author_posts_link(); ?>
-        </span>
         <!-- /post details -->
-
-    </div>
-    <!-- .header -->
-
-    <div class="card-body typo typo-selection">
-        <?php the_excerpt();?>
-    </div>
-    <?php edit_post_link(); ?>
-    <div class="card-footer">
     </div>
 </article>
 <!-- /article -->

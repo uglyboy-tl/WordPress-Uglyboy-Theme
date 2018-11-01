@@ -4,7 +4,7 @@
     </div>
 </aside>
 <!-- footer -->
-<footer class="pure-u-1" role="contentinfo">
+<footer class="pure-u-1 center bg-color" role="contentinfo">
 
     <!-- copyright -->
     <span class="">

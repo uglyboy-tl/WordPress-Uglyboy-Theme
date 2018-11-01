@@ -74,7 +74,7 @@ if ( post_password_required() ) {
 
 	$comments_args = array(
 		'fields' =>  $fields,
-		'class_form'        => 'card pure-form pure-form-stacked pure-g',
+		'class_form'        => 'pure-form pure-form-stacked pure-g',
 		'class_submit'      => 'pure-button pure-button-primary',
 		'comment_notes_before' => '',
 		'comment_field'        => '<div class="pure-u-1"><textarea id="comment" name="comment" required="required" class="pure-input-1" placeholder="'. __('Comment','uglyboy') .'"></textarea></div>',
