@@ -16,6 +16,10 @@ header .bg-image-title a{
     text-decoration: none;
 }
 
+footer.bg-color{
+    padding: 2em;
+}
+
 footer.bg-color,
 footer.bg-color a {
     color: #ede9ce;
