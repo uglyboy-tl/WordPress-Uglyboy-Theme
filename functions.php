@@ -7,7 +7,9 @@
 function uglyboy_setup() {
     // Localisation Support
     load_theme_textdomain('uglyboy', get_template_directory() . '/languages');
-
+    
+    add_theme_support('html5');
+    
     // Add Menu Support
     add_theme_support('menus');
     
@@ -79,6 +81,9 @@ require get_template_directory() . '/inc/paginate_links.php';
 
 // 日历组件
 require get_template_directory() . '/inc/calendar.php';
+
+// 评论组件
+require get_template_directory() . '/inc/comment.php';
 
 // 标签云组件
 require get_template_directory() . '/inc/tag_cloud.php';

@@ -39,7 +39,6 @@ if ( post_password_required() ) {
             );
         ?>
     </ol>
-
     <?php
     the_comments_pagination(
         array(
@@ -47,40 +46,40 @@ if ( post_password_required() ) {
             'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'uglyboy' ) . uglyboy_get_icon(array('icon' => 'arrow-right')) . '</span>',
         )
     );
-	endif; // Check for have_comments().
-
-
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-    if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : 
+    endif; // Check for have_comments().
     ?>
-    <p class="no-comments">
-        <?php _e( 'Comments are closed here.', 'uglyboy' ); ?>
-    </p>
-    <?php
-	endif;
+    <div class="card">
+        <?php
+        // If comments are closed and there are comments, let's leave a little note, shall we?
+        if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : 
+        ?>
+        <p class="no-comments">
+            <?php _e( 'Comments are closed here.', 'uglyboy' ); ?>
+        </p>
+        <?php
+        endif;
 
-    
-	// custem comment form
-	$commenter = wp_get_current_commenter();
-	$req = get_option( 'require_name_email' );
-	$aria_req = ( $req ? " aria-required='true'" : '' );
-	
-	$fields   =  array(
-		'author'  => '<div class="pure-u-1 pure-u-md-1-3">'.
-					 '<input id="author" name="author" type="text" placeholder="'. __( 'Name' ) . ( $req ? '*' : '' ) .'" value="' . esc_attr( $commenter['comment_author'] ) . '" class="pure-input-1"' . $html_req . ' /></div>',
-		'email'   => '<div class="pure-u-1 pure-u-md-2-3">'.
-					 '<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="'. __( 'Email' ) . ( $req ? '*' : '' ) .'" value="' . esc_attr( $commenter['comment_author_email'] ) . '" class="pure-input-1"' . $html_req . ' /></div>',
-	);
+        
+        // custem comment form
+        $commenter = wp_get_current_commenter();
+        $req = get_option( 'require_name_email' );
+        $aria_req = ( $req ? " aria-required='true'" : '' );
+        
+        $fields   =  array(
+            'author'  => '<div class="pure-u-1 pure-u-md-1-3">'.
+                        '<input id="author" name="author" type="text" placeholder="'. __( 'Name' ) . ( $req ? '*' : '' ) .'" value="' . esc_attr( $commenter['comment_author'] ) . '" class="pure-input-1"' . $html_req . ' /></div>',
+            'email'   => '<div class="pure-u-1 pure-u-md-2-3">'.
+                        '<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="'. __( 'Email' ) . ( $req ? '*' : '' ) .'" value="' . esc_attr( $commenter['comment_author_email'] ) . '" class="pure-input-1"' . $html_req . ' /></div>',
+        );
 
-	$comments_args = array(
-		'fields' =>  $fields,
-		'class_form'        => 'pure-form pure-form-stacked pure-g',
-		'class_submit'      => 'pure-button pure-button-primary',
-		'comment_notes_before' => '',
-		'comment_field'        => '<div class="pure-u-1"><textarea id="comment" name="comment" required="required" class="pure-input-1" placeholder="'. __('Comment','uglyboy') .'"></textarea></div>',
-	);
+        $comments_args = array(
+            'fields' =>  $fields,
+            'class_form'        => 'pure-form pure-form-stacked pure-g',
+            'class_submit'      => 'pure-button pure-button-primary',
+            'comment_field'        => '<div class="pure-u-1"><textarea id="comment" name="comment" required="required" class="pure-input-1" placeholder="'. __('Comment','uglyboy') .'"></textarea></div>',
+        );
 
-	comment_form($comments_args);
-	?>
-
+        comment_form($comments_args);
+        ?>
+    </div>
 </div><!-- #comments -->

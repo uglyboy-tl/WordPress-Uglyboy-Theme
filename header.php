@@ -27,7 +27,7 @@
     <header class="pure-u-1" role="banner">
 
         <!-- logo -->
-        <div class="pure-u-1 bg-image" id='logo' style="background-image:url(<?php header_image()?>);color:<?php header_textcolor();?>">
+        <div class="pure-u-1 bg-image" id='logo' style="background-image:url(<?php echo esc_url(str_replace(array("http:","https:"),"",get_header_image()))?>);color:<?php header_textcolor();?>">
             <div class="bg-image-title">
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                         <?php bloginfo( 'name' ); ?></a></h1>
