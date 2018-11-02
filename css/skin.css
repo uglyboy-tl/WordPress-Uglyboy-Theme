@@ -25,24 +25,6 @@
     padding: 0 .8rem;
 }
 
-.card .card-image {
-    padding-top: .8rem;
-}
-
-.card .card-image:first-child {
-    padding-top: 0;
-}
-
-.card .card-image:first-child img {
-    border-top-left-radius: .1rem;
-    border-top-right-radius: .1rem;
-}
-
-.card .card-image:last-child img {
-    border-bottom-left-radius: .1rem;
-    border-bottom-right-radius: .1rem;
-}
-
 /* Nav Shadow */
 .nav-shadow{
     margin-bottom: 1em;
