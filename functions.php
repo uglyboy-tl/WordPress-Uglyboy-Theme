@@ -64,6 +64,9 @@ function uglyboy_widgets_init() {
 }
 add_action( 'widgets_init', 'uglyboy_widgets_init' );
 
+// 增加主题选项
+require get_template_directory() . '/inc/theme_options.php';
+
 // 注册 css/js 文件
 require get_template_directory() . '/inc/init.php';
 
