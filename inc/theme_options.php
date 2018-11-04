@@ -13,15 +13,19 @@ if ($_POST['update_themeoptions'] == 'true' ) {themeoptions_update(); }
     <form method="POST" action="">
         <input type="hidden" name="update_themeoptions" value="true" />
         
-        <h4><?php _e("Basic","uglyboy") ?></h4>
-        <h4><input type="checkbox" name="local_jscss" id="local_jscss" <?php echo get_option('uglyboy_local_jscss'); ?> /> <?php _e("Use Local JS/CSS files","uglyboy") ?> </h4>
-        
-        <h4><?php _e("Color","uglyboy") ?></h4>
+        <h3><?php _e("Basic","uglyboy") ?></h3>
+        <h4><input type="checkbox" name="local_assets" id="local_assets" <?php echo get_option('uglyboy_local_assets'); ?> /> <?php _e("Use Local JS/CSS files","uglyboy") ?> </h4>
+        <h3><?php _e("Modular","uglyboy") ?></h3>
+        <h4><input type="checkbox" name="lightbox" id="lightbox" <?php echo get_option('uglyboy_lightbox'); ?> /> <?php _e("Use Lightbox Modular","uglyboy") ?> </h4>
+        <h4><input type="checkbox" name="scrollTop" id="scrollTop" <?php echo get_option('uglyboy_scrollTop'); ?> /> <?php _e("Use ScrollTop Modular","uglyboy") ?> </h4>
+        <h4><input type="checkbox" name="nav_menu" id="nav_menu" <?php echo get_option('uglyboy_nav_menu'); ?> /> <?php _e("Use Menu Modular","uglyboy") ?> </h4>
+        <!--
+        <h4><?php //_e("Color","uglyboy") ?></h4>
         <select name ="color">
-            <?php $color = get_option('uglyboy_color'); ?>
-            <option value="default" <?php if ($color=='gray') {echo 'selected';} ?> > <?php _e("Default","uglyboy") ?> </option>
+            <?php //$color = get_option('uglyboy_color'); ?>
+            <option value="default" <?php //if ($color=='gray') {echo 'selected';} ?> > <?php //_e("Default","uglyboy") ?> </option>
         </select>
-        
+        -->
         <p><input type="submit" name="bcn_admin_options" value="<?php _e("Update","uglyboy") ?>"/></p>
     </form>
 </div>
@@ -38,9 +42,13 @@ add_action('admin_menu', 'themeoptions_admin_menu');
 
 function themeoptions_update()
 {
-// 数据更新验证
-update_option('uglyboy_color', $_POST['color']);
-if ($_POST['local_jscss']=='on') {$display = 'checked';} else {$display =''; }
-update_option('uglyboy_local_jscss', $display);
+    // 数据更新验证
+    //update_option('uglyboy_color', $_POST['color']);
+    if ($_POST['local_assets']=='on') {$display = 'checked';} else {$display =''; }
+    update_option('uglyboy_local_assets', $display);
+    if ($_POST['lightbox']=='on') {$display = 'checked';} else {$display =''; }
+    update_option('uglyboy_lightbox', $display);
+    if ($_POST['scrollTop']=='on') {$display = 'checked';} else {$display =''; }
+    update_option('uglyboy_scrollTop', $display);
 }
 ?>

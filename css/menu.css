@@ -1,0 +1,131 @@
+/* Menu */
+#menu {
+    display: none;
+}
+
+nav>div.pure-menu {
+    width: 100%;
+}
+
+@media only screen and (max-width: 47.99rem) {
+
+    /* 默认隐藏菜单 */
+    nav>div.pure-menu ul.pure-menu-list,
+    nav .pure-menu-allow-hover ul {
+        display: none;
+    }
+
+    /* 显示菜单 */
+    #menu,
+    nav>div.pure-menu ul.show-menu,
+    nav .pure-menu-allow-hover ul.show-menu {
+        display: block;
+    }
+
+    /* 小屏幕菜单标识 */
+    nav {
+        position: relative;
+    }
+
+    #menu {
+        color: transparent;
+    }
+
+    #menu span,
+    #menu span::after,
+    #menu span::before {
+        /* these are the 3 lines of the menu icon */
+        position: absolute;
+        background-color: #1A1A1A;
+        height: 0.2rem;
+        width: 1rem;
+    }
+
+    #menu span {
+        top: 1.4rem;
+        left: 1.5rem;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transition: background-color .3s;
+        transition: background-color .3s;
+    }
+
+    #menu span::after,
+    #menu span::before {
+        content: '';
+        left: 0;
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+    }
+
+    #menu span::before {
+        -webkit-transform: translateY(-0.4rem);
+        -ms-transform: translateY(-0.4rem);
+        transform: translateY(-0.4rem);
+    }
+
+    #menu span::after {
+        -webkit-transform: translateY(0.4rem);
+        -ms-transform: translateY(0.4rem);
+        transform: translateY(0.4rem);
+    }
+
+    #menu.opened span {
+        background-color: transparent;
+    }
+
+    #menu.opened span::before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    #menu.opened span::after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    /* 小屏幕子菜单标识 */
+    span.submenu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        border-left: 0.1rem solid rgba(120, 120, 120, 0.15);
+        height: 2.8rem;
+        width: 2.8rem;
+        cursor: pointer;
+    }
+
+    span.submenu::after {
+        content: '';
+        position: absolute;
+        top: 0.95rem;
+        left: 1.35rem;
+        display: block;
+        width: 0.1rem;
+        height: 0.9rem;
+        background: #1A1A1A;
+        z-index: 99;
+    }
+
+    span.submenu::before {
+        content: '';
+        position: absolute;
+        left: 0.95rem;
+        top: 1.35rem;
+        display: block;
+        width: 0.9rem;
+        height: 0.1rem;
+        background: #1A1A1A;
+        z-index: 99;
+    }
+
+    span.submenu.opened:after {
+        display: none;
+    }
+}

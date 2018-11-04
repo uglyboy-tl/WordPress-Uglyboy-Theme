@@ -19,7 +19,7 @@
 
 <?php wp_footer(); ?>
 <script>
-    window.Zepto || document.write('<script src="js/vendor/zepto.min.js"><\/script>')
+    window.Zepto || document.write('<script src="<?php echo get_template_directory_uri()?>/js/zepto.min.js"><\/script>')
 </script>
 </body>
 
