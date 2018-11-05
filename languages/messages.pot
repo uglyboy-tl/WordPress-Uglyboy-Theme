@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: PACKAGE VERSION\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2018-10-29 10:08+0800\n"
+        "POT-Creation-Date: 2018-11-05 14:26+0800\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr  "Project-Id-Version: PACKAGE VERSION\n"
         "Content-Type: text/plain; charset=CHARSET\n"
         "Content-Transfer-Encoding: 8bit\n"
 
-#: ../loop.php:20
+#: ../loop.php:58
 msgid   "% Comments"
 msgstr  ""
 
@@ -30,15 +30,31 @@ msgstr  ""
 msgid   "%s Search Results for "
 msgstr  ""
 
-#: ../loop.php:20
+#: ../inc/paginate_links.php:118
+msgid   "&hellip;"
+msgstr  ""
+
+#: ../inc/paginate_links.php:28
+msgid   "&laquo; Previous"
+msgstr  ""
+
+#: ../loop.php:22
+msgid   ","
+msgstr  ""
+
+#: ../loop.php:58
 msgid   "1 Comment"
+msgstr  ""
+
+#: ../inc/theme_options.php:16
+msgid   "Basic"
 msgstr  ""
 
 #: ../comments.php:79
 msgid   "Comment"
 msgstr  ""
 
-#: ../comments.php:56
+#: ../comments.php:57
 msgid   "Comments are closed here."
 msgstr  ""
 
@@ -46,23 +62,27 @@ msgstr  ""
 msgid   "Copyright"
 msgstr  ""
 
-#: ../functions.php:43 ../functions.php:54
+#: ../functions.php:46 ../functions.php:57
 msgid   "Description for this widget-area..."
 msgstr  ""
 
-#: ../comments.php:71
+#: ../comments.php:72
 msgid   "Email"
 msgstr  ""
 
-#: ../functions.php:16
+#: ../functions.php:18
 msgid   "Header Menu"
 msgstr  ""
 
-#: ../loop.php:20
+#: ../loop.php:58
 msgid   "Leave your thoughts"
 msgstr  ""
 
-#: ../comments.php:69
+#: ../inc/theme_options.php:18
+msgid   "Module"
+msgstr  ""
+
+#: ../comments.php:70
 msgid   "Name"
 msgstr  ""
 
@@ -70,16 +90,20 @@ msgstr  ""
 msgid   "Next"
 msgstr  ""
 
+#: ../inc/paginate_links.php:29
+msgid   "Next &raquo;"
+msgstr  ""
+
 #: ../comments.php:19
 #, php-format
 msgid   "One Reply to &ldquo;%s&rdquo;"
 msgstr  ""
 
-#: ../inc/icon-functions.php:11
+#: ../inc/icon_functions.php:11
 msgid   "Please define an icon name."
 msgstr  ""
 
-#: ../inc/icon-functions.php:6
+#: ../inc/icon_functions.php:6
 msgid   "Please define default parameters in the form of an array."
 msgstr  ""
 
@@ -87,22 +111,50 @@ msgstr  ""
 msgid   "Previous"
 msgstr  ""
 
-#: ../comments.php:36
+#: ../comments.php:37
 msgid   "Reply"
 msgstr  ""
 
-#: ../loop.php:60
+#: ../loop.php:74
 msgid   "Sorry, nothing to display."
+msgstr  ""
+
+#: ../inc/theme_options.php:12 ../inc/theme_options.php:38
+msgid   "Theme Setting"
 msgstr  ""
 
 #: ../searchform.php:3
 msgid   "To search, type and hit enter."
 msgstr  ""
 
-#: ../functions.php:42
+#: ../inc/theme_options.php:29
+msgid   "Update"
+msgstr  ""
+
+#: ../inc/theme_options.php:19
+msgid   "Use Lightbox Modular"
+msgstr  ""
+
+#: ../inc/theme_options.php:17
+msgid   "Use Local JS/CSS files"
+msgstr  ""
+
+#: ../inc/theme_options.php:21
+msgid   "Use Menu Modular"
+msgstr  ""
+
+#: ../inc/theme_options.php:20
+msgid   "Use ScrollTop Modular"
+msgstr  ""
+
+#: ../functions.php:45
 msgid   "Widget Area 1"
 msgstr  ""
 
-#: ../functions.php:53
+#: ../functions.php:56
 msgid   "Widget Area 2"
+msgstr  ""
+
+#: ../inc/theme_options.php:38
+msgid   "setting"
 msgstr  ""

@@ -15,7 +15,7 @@ if ($_POST['update_themeoptions'] == 'true' ) {themeoptions_update(); }
         
         <h3><?php _e("Basic","uglyboy") ?></h3>
         <h4><input type="checkbox" name="local_assets" id="local_assets" <?php echo get_option('uglyboy_local_assets'); ?> /> <?php _e("Use Local JS/CSS files","uglyboy") ?> </h4>
-        <h3><?php _e("Modular","uglyboy") ?></h3>
+        <h3><?php _e("Module","uglyboy") ?></h3>
         <h4><input type="checkbox" name="lightbox" id="lightbox" <?php echo get_option('uglyboy_lightbox'); ?> /> <?php _e("Use Lightbox Modular","uglyboy") ?> </h4>
         <h4><input type="checkbox" name="scrollTop" id="scrollTop" <?php echo get_option('uglyboy_scrollTop'); ?> /> <?php _e("Use ScrollTop Modular","uglyboy") ?> </h4>
         <h4><input type="checkbox" name="nav_menu" id="nav_menu" <?php echo get_option('uglyboy_nav_menu'); ?> /> <?php _e("Use Menu Modular","uglyboy") ?> </h4>

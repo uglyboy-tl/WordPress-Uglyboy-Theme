@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uglyboy WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-29 10:08+0800\n"
+"POT-Creation-Date: 2018-11-05 14:26+0800\n"
 "PO-Revision-Date: 2018-10-28 10:05+0800\n"
 "Last-Translator:  <uglyboy@aliyun.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../loop.php:20
+#: ../loop.php:58
 msgid "% Comments"
 msgstr "% 条评论"
 
@@ -30,15 +30,32 @@ msgstr "&ldquo;%2$s&rdquo;有 %1$s 条评论"
 msgid "%s Search Results for "
 msgstr "%s 条搜索结果，关键词："
 
-#: ../loop.php:20
+#: ../inc/paginate_links.php:118
+msgid "&hellip;"
+msgstr ""
+
+#: ../inc/paginate_links.php:28
+#, fuzzy
+msgid "&laquo; Previous"
+msgstr "上一页"
+
+#: ../loop.php:22
+msgid ","
+msgstr "，"
+
+#: ../loop.php:58
 msgid "1 Comment"
 msgstr "1 条评论"
+
+#: ../inc/theme_options.php:16
+msgid "Basic"
+msgstr "基础"
 
 #: ../comments.php:79
 msgid "Comment"
 msgstr "评论"
 
-#: ../comments.php:56
+#: ../comments.php:57
 msgid "Comments are closed here."
 msgstr "评论已关闭"
 
@@ -46,23 +63,27 @@ msgstr "评论已关闭"
 msgid "Copyright"
 msgstr "版权"
 
-#: ../functions.php:43 ../functions.php:54
+#: ../functions.php:46 ../functions.php:57
 msgid "Description for this widget-area..."
 msgstr "该组件区域的描述..."
 
-#: ../comments.php:71
+#: ../comments.php:72
 msgid "Email"
 msgstr "电子邮件"
 
-#: ../functions.php:16
+#: ../functions.php:18
 msgid "Header Menu"
 msgstr "顶部菜单"
 
-#: ../loop.php:20
+#: ../loop.php:58
 msgid "Leave your thoughts"
 msgstr "发表评论"
 
-#: ../comments.php:69
+#: ../inc/theme_options.php:18
+msgid "Module"
+msgstr "模块"
+
+#: ../comments.php:70
 msgid "Name"
 msgstr "姓名"
 
@@ -70,16 +91,20 @@ msgstr "姓名"
 msgid "Next"
 msgstr "下一页"
 
+#: ../inc/paginate_links.php:29
+msgid "Next &raquo;"
+msgstr "下一页"
+
 #: ../comments.php:19
 #, php-format
 msgid "One Reply to &ldquo;%s&rdquo;"
 msgstr "&ldquo;%s&rdquo;有 1 条评论"
 
-#: ../inc/icon-functions.php:11
+#: ../inc/icon_functions.php:11
 msgid "Please define an icon name."
 msgstr "请定义图标的文件名"
 
-#: ../inc/icon-functions.php:6
+#: ../inc/icon_functions.php:6
 msgid "Please define default parameters in the form of an array."
 msgstr "请定义默认选项"
 
@@ -87,22 +112,50 @@ msgstr "请定义默认选项"
 msgid "Previous"
 msgstr "上一页"
 
-#: ../comments.php:36
+#: ../comments.php:37
 msgid "Reply"
 msgstr "回复"
 
-#: ../loop.php:60
+#: ../loop.php:74
 msgid "Sorry, nothing to display."
 msgstr "对不起，没有要显示的内容"
+
+#: ../inc/theme_options.php:12 ../inc/theme_options.php:38
+msgid "Theme Setting"
+msgstr "主题设置"
 
 #: ../searchform.php:3
 msgid "To search, type and hit enter."
 msgstr "请键入搜索内容并按回车"
 
-#: ../functions.php:42
+#: ../inc/theme_options.php:29
+msgid "Update"
+msgstr "更新"
+
+#: ../inc/theme_options.php:19
+msgid "Use Lightbox Modular"
+msgstr "使用 Lightbox 模块"
+
+#: ../inc/theme_options.php:17
+msgid "Use Local JS/CSS files"
+msgstr "使用本地的 js/css 文件"
+
+#: ../inc/theme_options.php:21
+msgid "Use Menu Modular"
+msgstr "使用 Menu 模块"
+
+#: ../inc/theme_options.php:20
+msgid "Use ScrollTop Modular"
+msgstr "使用 ScrollTop 模块"
+
+#: ../functions.php:45
 msgid "Widget Area 1"
 msgstr "组件区域 1"
 
-#: ../functions.php:53
+#: ../functions.php:56
 msgid "Widget Area 2"
 msgstr "组件区域 2"
+
+#: ../inc/theme_options.php:38
+msgid "setting"
+msgstr "设置"
