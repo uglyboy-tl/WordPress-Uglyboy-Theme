@@ -1,7 +1,7 @@
 <?php
 
 function filter_get_comment_class( $classes ) { 
-    array_push($classes,"card");
+    array_push($classes,"card","card-body");
     return $classes; 
 }; 
 

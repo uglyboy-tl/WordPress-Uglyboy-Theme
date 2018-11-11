@@ -45,9 +45,9 @@ function uglyboy_widgets_init() {
         'name' => __('Widget Area 1', 'uglyboy'),
         'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="card %2$s">',
+        'before_widget' => '<div id="%1$s" class="card card-body %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h4>',
+        'before_title' => '<h4 class="card-title">',
         'after_title' => '</h4>'
     ));
 
@@ -56,9 +56,9 @@ function uglyboy_widgets_init() {
         'name' => __('Widget Area 2', 'uglyboy'),
         'description' => __('Description for this widget-area...', 'uglyboy'),
         'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="card pure-u-1 pure-u-md-1-3 %2$s">',
+        'before_widget' => '<div id="%1$s" class="card card-body pure-u-1 pure-u-md-1-3 %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h4>',
+        'before_title' => '<h4 class="card-title">',
         'after_title' => '</h4>'
     ));
 }

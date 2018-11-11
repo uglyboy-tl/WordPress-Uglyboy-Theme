@@ -2,6 +2,19 @@
 
 <!-- article -->
 <article id="post-<?php the_ID(); ?>" <?php post_class("card"); ?>>
+    <!-- .header -->
+    <div class="card-header">
+        <span class="date">
+            <?php echo uglyboy_get_icon( array('icon' => 'calendar' ))?>
+            <?php the_time('Y.m.d G:i'); ?>
+        </span>
+        <span class="category">
+            <?php echo uglyboy_get_icon( array('icon' => 'archive' ))?>
+            <?php the_category(__(',','uglyboy')); ?>
+        </span>
+    </div>
+    <!-- .header -->
+    
     <!-- post thumbnail -->
     <div class="card-image">
         <?php if ( !is_singular() && has_post_thumbnail()) : // Check if Thumbnail exists ?>
@@ -11,28 +24,16 @@
         <?php endif; ?>
     </div>
     <!-- /post thumbnail -->
-    <!-- .header -->
-    <div class="card-header">
-        <span class="date">
-            <?php echo uglyboy_get_icon( array('icon' => 'calendar' ))?>
-            <?php the_time('Y 年 m 月 d 日 G:i'); ?>
-        </span>
-        <span class="category">
-            <?php echo uglyboy_get_icon( array('icon' => 'archive' ))?>
-            <?php the_category(__(',','uglyboy')); ?>
-        </span>
-
+    
+    <div class="card-body typo typo-selection">
+        
         <!-- post title -->
-        <h2>
-            <a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>">
+        <h2 class="card-title">
+            <a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>" class="card-title">
                 <?php the_title(); ?></a>
         </h2>
         <!-- /post title -->
-
-    </div>
-    <!-- .header -->
-
-    <div class="card-body typo typo-selection">
+        
     <?php if (is_singular()):
         the_content();
     else:

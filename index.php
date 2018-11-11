@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 
 <!-- wrapper -->
-<div class="container pure-g">
+<div class="pure-g">
 
-    <main class="pure-u-1 pure-u-md-2-3" role="main">
+    <?php get_sidebar(); ?>
+    
+    <main class="pure-u-1 pure-u-md-3-4" role="main">
         <!-- section -->
         <section>
 
@@ -33,8 +35,6 @@
         </section>
         <!-- /section -->
     </main>
-
-    <?php get_sidebar(); ?>
 
 </div>
 <!-- /wrapper -->

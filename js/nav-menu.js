@@ -45,4 +45,32 @@ $(document).ready(function(){
         });
 
     });
+    
+	// 设置 Logo 区固定
+	$('nav').prepend('<div id="nav-space"><b>1</b></div>');	
+	$('#nav-space').css({"visibility":"hidden","height":"0px"});
+	
+	// 菜单吸顶
+	$(window).scroll(function() {
+		var logo_height = $("nav").offset().top;
+		var nav_height = $("nav").get(0).offsetHeight;
+	
+		var nav = $("nav>div.pure-menu");
+		if($(this).scrollTop()>=logo_height){
+			nav.addClass("pure-menu-fixed");
+			$('#nav-space').css("height",nav_height+"px");
+		}
+		else{
+			nav.removeClass("pure-menu-fixed");
+			$('#nav-space').css("height","0px");
+		} 
+	});
+	
+	$(window).resize(function(){
+		if($(this).scrollTop()<$("nav").offset().top){
+			$("nav>div.pure-menu").removeClass("pure-menu-fixed");
+			$('#nav-space').css("height","0px");
+		}
+	});
+	
 });
