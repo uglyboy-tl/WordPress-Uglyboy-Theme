@@ -41,7 +41,7 @@ function uglyboy_styles()
     
     wp_enqueue_style('uglyboy', get_template_directory_uri() . '/style.css', array("grids-responsive-min"), '2.0.2', 'all');
        
-    wp_enqueue_style('skin', get_template_directory_uri() . '/css/skin.css', array("uglyboy"), '1.0', 'all');
+    wp_enqueue_style('skin', get_template_directory_uri() . '/css/skin-simple.css', array("uglyboy"), '1.0', 'all');
     
     wp_enqueue_style('color', get_template_directory_uri() . '/css/color.css', array("uglyboy"), '1.0', 'all');
     
