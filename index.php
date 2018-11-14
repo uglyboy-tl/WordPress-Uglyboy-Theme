@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- wrapper -->
-<div class="pure-g">
+<div class="container pure-g">
 
     <?php get_sidebar(); ?>
     

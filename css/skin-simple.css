@@ -1,3 +1,15 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media only screen and (min-width: 96rem) {
+    .container {
+        max-width: 96rem;
+    }
+}
+
 header.pure-u-1 {
     text-align: center;
     top: auto;
