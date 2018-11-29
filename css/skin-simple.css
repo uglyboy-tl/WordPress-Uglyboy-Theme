@@ -169,6 +169,7 @@ header.pure-u-1 {
     opacity: .5;
 }
 
-footer.conter {
+footer.center {
     margin: 0 auto;
+    text-align: center;
 }
