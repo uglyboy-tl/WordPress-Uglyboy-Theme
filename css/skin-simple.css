@@ -168,3 +168,7 @@ header.pure-u-1 {
     margin: 0;
     opacity: .5;
 }
+
+footer.conter {
+    margin: 0 auto;
+}
